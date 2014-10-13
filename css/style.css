@@ -5,3 +5,11 @@ input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointe
 body { padding: 10px; }
 .departements { border: solid 1px #aaa; margin: 10px; padding: 10px; }
 .name { text-transform: uppercase; letter-spacing: 1px; }
+
+.departement {
+	cursor: pointer;
+}
+.departement:hover{
+	stroke: white;
+	stroke-width: 1px;
+}
