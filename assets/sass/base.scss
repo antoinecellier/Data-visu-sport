@@ -8,3 +8,24 @@
 body{
 
 }
+
+svg {
+    display:block;
+    border:solid;
+    width:67%;
+    height:1%; /* fix webkit */
+    overflow:hidden;/* fix IE */
+    margin-top: -100px
+}
+
+.departement {
+    cursor: pointer;
+}
+
+.departement:hover {
+    fill: black;
+}
+
+.textPathDep{
+	font-size: 12px;
+}

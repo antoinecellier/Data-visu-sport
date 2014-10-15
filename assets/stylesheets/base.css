@@ -66,3 +66,30 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 12, ../sass/base.scss */
+svg {
+  display: block;
+  border: solid;
+  width: 67%;
+  height: 1%;
+  /* fix webkit */
+  overflow: hidden;
+  /* fix IE */
+  margin-top: -100px;
+}
+
+/* line 21, ../sass/base.scss */
+.departement {
+  cursor: pointer;
+}
+
+/* line 25, ../sass/base.scss */
+.departement:hover {
+  fill: black;
+}
+
+/* line 29, ../sass/base.scss */
+.textPathDep {
+  font-size: 12px;
+}

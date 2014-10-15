@@ -53,27 +53,33 @@ MapDepartement.directive('d3map', [
 			            .selectAll("path")
 			            .data(data.features);
 
-			        /*
-			         * On créait un ColorScale, qui va nous
-			         * permettre d'assigner plus tard une
-			         * couleur de fond à chacun de nos
-			         * départements
-			         */
-			        var colorScale = d3.scale.category20c();
+			        
+			        //  * On créait un ColorScale, qui va nous
+			        //  * permettre d'assigner plus tard une
+			        //  * couleur de fond à chacun de nos
+			        //  * départements
+			         
+			        // var colorScale = d3.scale.category20c();
 
 			        /*
 			         * Pour chaque entrée du tableau feature, on
 			         * créait un élément SVG path, avec les
 			         * propriétés suivantes
 			         */
-			        features.enter()
-			          .append("path")
-			            .attr('class', 'departement')
-			            .attr('fill', function(d) { 
-			              return colorScale(+d.properties.CODE_DEPT); 
-			            })
-			            .attr("d", path)
-			            .on('click', countyClickHandler);
+			        var gDep = features
+			        		   .enter()
+			        		   .append('g')
+			        		   .attr('class','node');
+
+			 		var pathDep = gDep
+					.append("path")
+					.attr('class', 'departement')
+					.attr('fill','white')
+					.attr('stroke','grey')
+					.attr('d', path)
+					.on('click', countyClickHandler);		
+
+					console.log(path); 
 
 			      };
 
@@ -86,9 +92,9 @@ MapDepartement.directive('d3map', [
 			       */
 			      var centered;
 			      function countyClickHandler(d) {
-			        hideMap();
-			        showDepData()
-			        initViewOneDepartement( d );
+			        // hideMap();
+			        // showDepData();
+			        // initViewOneDepartement( d );
 			        var x, y, k;
 
 			        if (d && centered !== d) {
