@@ -24,11 +24,17 @@
 
 	<body ng-app="DataVizSport">
 		
-		<div  ng-controller="MapDepartementCtrl" >
+
+		<div ng-controller="MapDepartementCtrl" >
 			<section ng-if="loadingIsDone">
 				<d3map data='dataMap'></d3map>
 				<div id="chart"></div>					
 			</section>
+		
+		<section class="infoCurrentDep">
+			<h1 class="infoNomCurrentDep"></h1>
+		</section>
+
 		</div>
 
 		<!-- Scripts -->

@@ -4,7 +4,4 @@ MapDepartement.controller("MapDepartementCtrl",['$scope','DatasService', functio
 			$scope.dataMap = departements;
 			$scope.loadingIsDone = true;
 		});		
-
-
-
 }]);

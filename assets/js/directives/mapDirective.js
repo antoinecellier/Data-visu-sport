@@ -8,7 +8,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 		    link: function (scope, element) {
 			      var width = 800;
 			      var height = 800;
-			      var data = scope.data;
+			      var datas = scope.data;
 
 			      /* 
 			       * On créait un nouvel objet path qui permet 
@@ -44,18 +44,15 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 			      /*
 			       * On charge les données GeoJSON
 			       */
-			      var loadData =  function(data) {
+			      var loadData =  function(datas) {
 	
 
 			      	/*
 			         * On "bind" un élément SVG path pour chaque entrée
 			         * du tableau features de notre objet geojson
 			         */
-			        var features = deps
-			            .selectAll("path")
-			            .data(data.features);
 
-			        
+
 			        //  * On créait un ColorScale, qui va nous
 			        //  * permettre d'assigner plus tard une
 			        //  * couleur de fond à chacun de nos
@@ -68,21 +65,25 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 			         * créait un élément SVG path, avec les
 			         * propriétés suivantes
 			         */
-			        var gDep = features
-			        		   .enter()
-			        		   .append('g')
-			        		   .attr('class','node');
-
-			 		var pathDep = gDep
+			        var features = deps
+			        .selectAll("path")
+			        .data(datas.features)
+			 		.enter()
 					.append("path")
 					.attr('class', 'departement')
 					.attr('fill','white')
 					.attr('stroke','grey')
 					.attr('d', path)
-					.on('click', countyClickHandler);		
+					.on('click', countyClickHandler)
+					.on('mouseover', function( d ){
+						d3.selectAll('.infoNomCurrentDep')
+						  .text(function() {
+						  	return d.properties.NOM_DEPT; 
+						  });
+					});		
 			      };
 
-			      loadData(data);
+			      loadData(datas);
 
 			      /*
 			       * Fonction qui permet de zoomer sur la carte

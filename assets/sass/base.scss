@@ -15,7 +15,8 @@ svg {
     width:67%;
     height:1%; /* fix webkit */
     overflow:hidden;/* fix IE */
-    margin-top: -100px
+    margin-top: -100px;
+    float : left;
 }
 
 .departement {
@@ -28,4 +29,9 @@ svg {
 
 .textPathDep{
 	font-size: 12px;
+}
+
+.infoNomCurrentDep{
+	float : right;
+	position:absolute;
 }
