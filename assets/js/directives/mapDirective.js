@@ -1,5 +1,5 @@
-MapDepartement.directive('d3map', [
-	function () {
+MapDepartement.directive('d3map', ['DatasService','$http',
+	function (DatasService, $http) {
 		return {
 			restrict: 'E',
 		    scope: {
@@ -40,12 +40,14 @@ MapDepartement.directive('d3map', [
 			          .append("g")
 			          .attr("id", "departements");
 
+
 			      /*
 			       * On charge les données GeoJSON
 			       */
 			      var loadData =  function(data) {
+	
 
-			        /*
+			      	/*
 			         * On "bind" un élément SVG path pour chaque entrée
 			         * du tableau features de notre objet geojson
 			         */
@@ -78,9 +80,6 @@ MapDepartement.directive('d3map', [
 					.attr('stroke','grey')
 					.attr('d', path)
 					.on('click', countyClickHandler);		
-
-					console.log(path); 
-
 			      };
 
 			      loadData(data);
