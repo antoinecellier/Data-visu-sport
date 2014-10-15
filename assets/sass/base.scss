@@ -3,20 +3,61 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+//Bibliothèque compass
+@import "compass";
+@import "compass/css3";
 @import "compass/reset";
-
+@import "compass/layout";
+@import "colors";
+@import "fonts";
 body{
+	@include font($black,14px ,$aspergit,normal); 
+}
 
+#borderTop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 30px;
+	background: $grey;
+	z-index: 9999;
+}
+
+#borderLeft {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 30px;
+	background: $grey;
+	z-index: 9999;
+}
+
+#borderBottom {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 30px;
+	background: $grey;
+	z-index: 9999;
+}
+
+#borderRight {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 30px;
+	background: $grey;
+	z-index: 9999;
 }
 
 svg {
     display:block;
-    border:solid;
-    width:67%;
-    height:1%; /* fix webkit */
     overflow:hidden;/* fix IE */
-    margin-top: -100px;
-    float : left;
+    margin-top: -70px;
 }
 
 .departement {
@@ -31,7 +72,114 @@ svg {
 	font-size: 12px;
 }
 
-.infoNomCurrentDep{
-	float : right;
-	position:absolute;
+.infoCurrentDep{
+	margin-top: 100px;
+	text-align: center;
+	.infoNomCurrentDep{
+		@include font($black,40px ,$aspergit,normal);
+		border-bottom: 1px solid $black;
+		padding-bottom: 25px;
+	}
+
+	.infoNumCurrentDep{
+		@include font($black,40px ,"Oswald",normal);
+	}
+
+	.infoNbLicenciesCurrentDep{
+		padding-top: 25px;	
+		@include font($black,35px ,$aspergit,normal);	
+	}
+
+	.infoLibelleNbLicenciesCurrentDep{
+		@include font($black,30px ,$aspergit,normal);
+		border-bottom: 1px solid $black;
+		padding-bottom: 25px;		
+	}
+}
+
+.titleSite{
+	border-top: 1px solid $black;
+	text-align: center;
+	margin-top: 100px;
+	.hightTitle{
+		padding-top: 50px;	
+		@include font($black,40px ,"Oswald",normal);
+		margin-top: 25px;
+	}
+	.subTitle{
+		@include font($black,30px ,$aspergit,normal);
+		margin-top: 15px;
+		font-style: italic;
+		border-bottom: 1px solid $black;
+		padding-bottom: 50px;
+	}
+}
+
+
+
+
+/* Sticky footer */
+#compteurs{
+	.blockDepartements{
+	  height: 100px;
+	  width: 200px;
+	  background-color: $black;
+	  z-index: 9999;
+	  position: absolute; 
+	  bottom: 30px; 
+	  left: 30px;
+	  text-align: center;
+
+	  .nbDepartements{
+		@include font($white,35px ,"Oswald",normal);
+		display: block;
+		font-weight: bold;
+		line-height: 60px;
+	  }
+	  .libelleNbDepartements{
+		@include font($white,15px ,$aspergit,normal); 
+	  }
+	}
+
+	.blockInstallations{
+	  height: 100px;
+	  width: 200px;
+	  background-color: $black;
+	  z-index: 9999;
+	  position: absolute; 
+	  bottom: 30px; 
+	  left: 230px;
+	  text-align: center;
+	  border-left: 1px solid white;
+	  .nbInstallations{
+		@include font($white,35px ,"Oswald",normal);
+		display: block;
+		font-weight: bold;
+		line-height: 60px;
+	  }
+	  .libelleNbInstallations{
+		@include font($white,15px ,$aspergit,normal); 
+	  }
+	}	
+
+	.blockLicences{
+	  height: 100px;
+	  width: 150px;
+	  background-color: $black;
+	  z-index: 9999;
+	  position: absolute; 
+	  bottom: 30px; 
+	  left: 430px;
+	  text-align: center;
+	  border-left: 1px solid white;
+	  .nbLicencies{
+		@include font($white,35px ,"Oswald",normal);
+		display: block;
+		font-weight: bold;
+		line-height: 60px;
+	  }
+	  .libelleNbLicencies{
+		@include font($white,15px ,$aspergit,normal); 
+	  }
+	}	
 }

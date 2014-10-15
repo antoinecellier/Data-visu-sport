@@ -65,3 +65,44 @@ MapDepartement.provider("DatasService", function (){
 				return ManageData;
 			}
 		});
+
+MapDepartement.provider("DatasWidgetsService", function (){
+			this.$get = function($http, $q, DatasService){
+
+
+				var ManageWidgetData = {
+					getNbDepartements : function() {
+						var nbDepartements = 
+						DatasService.getDepartements().then(function(departements){
+							return departements.features.length;
+						}, function(reason){
+							return $q.reject(reason);
+						});
+						return nbDepartements;
+					 }//,
+					// getNbInstallation: function( id ) {
+					// 	var geoDepartement = 
+					// 		ManageData.getDepartements().then(function(geoDep){
+					// 			angular.forEach(geoDep.features, function(index) {
+					// 			  if(index.properties.CODE_DEPT == id){
+					// 			   	departement = index;
+					// 			  }
+					// 			});
+					// 			return departement;
+					// 		});
+					// 	return geoDepartement;
+					// },
+					// getNbLicencies: function() {
+					// 	var promiseEnd = datas.then(function(value){
+					// 		return value;
+					// 	}, function(reason){
+					// 		return $q.reject(reason);
+					// 	});
+
+					// 	return promiseEnd;
+					// }
+				};
+
+				return ManageWidgetData;
+			}
+		});

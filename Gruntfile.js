@@ -7,10 +7,11 @@ module.exports = function (grunt){
 					sassDir: ['assets/sass'],
 					cssDir: ['assets/stylesheets'],
 					imagesDir: ['assets/sass/img'],
+					fontsDir: ['assets/fonts'],
 					relativeAssets: false,
 		        	noLineComments: false
 		      	}
-		   }
+		   } 
 		},
        express: {
             dev: {

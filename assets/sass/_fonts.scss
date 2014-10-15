@@ -1,0 +1,39 @@
+// Aspergit
+
+@include font-face("Aspergit", font-files("aspergit-webfont.ttf"));
+
+@include font-face("Aspergit Light", font-files("aspergit_light-webfont.ttf"));
+ 
+@include font-face("Aspergit Light Italic", font-files("aspergit_light_italic-webfont.ttf"));
+ 
+@include font-face("Aspergit Italic", font-files("aspergit_italic-webfont.ttf"));
+
+@include font-face("Aspergit Bold Italic", font-files("aspergit_bold_italic_0-webfont.ttf"));
+
+@include font-face("Aspergit Bold", font-files("aspergit_bold-webfont.ttf"));
+
+@include font-face("Blenda Script", font-files("blenda_script-webfont.ttf"));
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+$aspergit : "Aspergit";
+$aspergit-light : "Aspergit Light";
+$aspergit-light-italic : "Aspergit Light Italic";
+$aspergit-italic : "Aspergit Italic";
+$aspergit-bold-italic : "Aspergit Bold Italic";
+$aspergit-bold : "Aspergit Bold";
+$blenda : "Blenda Script";
+
+
+// Mixin who define color, font-size, font-family and letter-spacing for font
+@mixin font($color : $black, $font-size: 14px ,$font-family : $aspergit, $letter-spacing : normal)
+{
+	color : $color;
+	font-size : $font-size;
+	font-family : $font-family;
+	letter-spacing : $letter-spacing;
+}
+ 
+// Text shadow
+$default-text-shadow-color: rgba($black, 0.9);

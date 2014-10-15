@@ -7,9 +7,10 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 		    },
 		    link: function (scope, element) {
 			      var width = 800;
-			      var height = 800;
+			      var height = 700;
 			      var datas = scope.data;
 
+			      initTitleDiv();
 			      /* 
 			       * On créait un nouvel objet path qui permet 
 			       * de manipuler les données géographiques.
@@ -19,7 +20,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 			      // On définit les propriétés de la projection à utiliser
 			      var projection = d3.geo.conicConformal() // Lambert-93
 			                      .center([2.454071, 47.279229]) // On centre la carte sur la France
-			                      .scale(5000)
+			                      .scale(4000)
 			                      .translate([width / 2, height / 2]);
 
 			      path.projection(projection); // On assigne la projection au path
@@ -32,13 +33,20 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 			          .attr("width", width)
 			          .attr("height", height);
 
+
 			      /*
 			       * On créait un groupe SVG qui va accueillir
 			       * tous nos départements
 			       */
 			      var deps = svg
 			          .append("g")
-			          .attr("id", "departements");
+			          .attr("id", "departements")
+			          .attr("transform", "translate(0,0)scale(-1,-1)");;
+
+			          deps
+			          .transition()
+			          .duration(2000)
+			          .attr("transform", "translate(0,0)scale(1,1)");
 
 
 			      /*
@@ -76,15 +84,87 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 					.attr('d', path)
 					.on('click', countyClickHandler)
 					.on('mouseover', function( d ){
-						d3.selectAll('.infoNomCurrentDep')
-						  .text(function() {
-						  	return d.properties.NOM_DEPT; 
-						  });
+						return displayStatDep( d );
+					}).on('mouseout', function( d ){
+						return removeStatDep( d );
 					});		
 			      };
 
 			      loadData(datas);
 
+
+			      /* Fonction qui affichage les stats à la volé
+			       * pour un département
+			      */
+			      function displayStatDep(d)
+			      {
+						d3.selectAll('.titleSite').remove();
+			      		d3.selectAll('.oneStatDep').remove();
+						
+						var frameInfoDep = d3.selectAll('.infoCurrentDep');
+						
+						var divOneDep = 
+						  frameInfoDep
+						  .append('div')
+						  .attr('class','oneStatDep');
+
+						  divOneDep.append('div')
+						  .attr('class','infoNumCurrentDep')
+						  .text(function() {
+						  	return "#"+d.properties.CODE_DEPT; 
+						  });
+
+						  divOneDep.append('h1')
+						  .attr('class','infoNomCurrentDep')
+						  .text(function() {
+						  	return d.properties.NOM_DEPT; 
+						  });
+
+						  divOneDep.append('div')
+						  .attr('class','infoNbLicenciesCurrentDep')
+						  .text(function() {
+						  	return 759 - (6 * d.properties.ID_GEOFLA); 
+						  });
+
+						  divOneDep.append('div')
+						  .attr('class','infoLibelleNbLicenciesCurrentDep')
+						  .text(function() {
+						  	return "licenciés"; 
+						  });	  						  	      	
+			      }
+
+			      /* Fonction qui retire les stats à la volé
+			       * pour un département
+			      */
+			      function removeStatDep(d)
+			      {
+						d3.selectAll('.oneStatDep').remove();
+						initTitleDiv();
+			      }
+
+			      /*
+			      *	Initialise la div "titre du site"
+			      */
+			      function initTitleDiv(){
+						var frameInfoDep = d3.selectAll('.infoCurrentDep');
+						
+						var titleSite = frameInfoDep
+						  		.append('div')
+						  		.attr('class','titleSite');
+
+						var hightTitle = titleSite
+						  		.append('div')
+						  		.attr('class','hightTitle')
+						  		.text(function(){
+						  			return "INSTALLATIONS & LICENCIES SPORTIFS"
+						  		});
+
+						titleSite.append('div')
+						  		.attr('class','subTitle')
+						  		.text(function(){
+						  			return "en France métropolitaine"
+						  		});
+			      }
 			      /*
 			       * Fonction qui permet de zoomer sur la carte
 			       * en cliquant sur les départements

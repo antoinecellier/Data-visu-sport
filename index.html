@@ -23,20 +23,41 @@
 	</head>
 
 	<body ng-app="DataVizSport">
-		
-
-		<div ng-controller="MapDepartementCtrl" >
-			<section ng-if="loadingIsDone">
-				<d3map data='dataMap'></d3map>
-				<div id="chart"></div>					
-			</section>
-		
-		<section class="infoCurrentDep">
-			<h1 class="infoNomCurrentDep"></h1>
-		</section>
-
+	<div id="borderTop"></div>
+	<div id="borderLeft"></div>
+	<div id="borderBottom"></div>
+	<div id="borderRight"></div>
+	<div class="container">
+  		<div class="row" ng-controller="MapDepartementCtrl">
+  			<div class="col-md-4">
+				<section class="infoCurrentDep">
+				</section>
+			</div>
+  			<div class="col-md-8">
+					<section ng-if="loadingIsDone">
+						<d3map data='dataMap'></d3map>
+						<div id="chart"></div>					
+					</section>
+			</div>
 		</div>
 
+		<section id="compteurs">
+			<div class="blockDepartements">
+					<span class="nbDepartements" ng-bind="nbDepartements"></span>
+					<span class="libelleNbDepartements">DEPARTEMENTS</span>		
+			</div>
+			<div class="blockInstallations">
+					<span class="nbInstallations">200</span>
+					<span class="libelleNbInstallations">INSTALLATIONS</span>		
+			</div>
+			<div class="blockLicences">
+					<span class="nbLicencies">200</span>
+					<span class="libelleNbLicencies">LICENCIES</span>		
+			</div>
+		</section>
+	</div>
+
+	
 		<!-- Scripts -->
 		<script src="assets/js/d3/d3.min.js"></script>
 		<script 
