@@ -51,7 +51,7 @@ MapDepartement.provider("DatasService", function (){
 					getDataDep: function( id ) {
 						var departement = 
 							ManageData.getDatas().then(function(sportDep){
-								angular.forEach(sportDep, function(index) {
+								angular.forEach(sportDep.data.datas, function(index) {
 								  if(index.id == id){
 								  	departement = index;
 								  }
@@ -79,19 +79,34 @@ MapDepartement.provider("DatasWidgetsService", function (){
 							return $q.reject(reason);
 						});
 						return nbDepartements;
-					 }//,
-					// getNbInstallation: function( id ) {
-					// 	var geoDepartement = 
-					// 		ManageData.getDepartements().then(function(geoDep){
-					// 			angular.forEach(geoDep.features, function(index) {
-					// 			  if(index.properties.CODE_DEPT == id){
-					// 			   	departement = index;
-					// 			  }
-					// 			});
-					// 			return departement;
-					// 		});
-					// 	return geoDepartement;
-					// },
+					 },
+					 getNbLicenceParDepartements: function( id ) {
+						var nbLicenceParDepartement =
+							DatasService.getDataDep( id ).then(function(dataDep){
+								var nbLicencies = 0;
+								angular.forEach(dataDep.sport, function (index){
+									nbLicencies += parseInt(index.nbLicence);
+								});
+								return nbLicencies;
+							});
+						return nbLicenceParDepartement;
+					},
+					getNbLicenceTotal: function() {
+						var NbLicenceTotal = 
+							DatasService.getDatas().then(function(datas){
+								var nbLicenciesTotal = 0;
+								angular.forEach(datas.data.datas, function (index){
+									angular.forEach(index.sport, function (index){
+										if(!isNaN(index.nbLicence))
+											nbLicenciesTotal += parseInt(index.nbLicence);
+									});
+								});
+								return nbLicenciesTotal;
+							}, function(reason){
+								return $q.reject(reason);
+							});
+						return NbLicenceTotal;
+					}// ,
 					// getNbLicencies: function() {
 					// 	var promiseEnd = datas.then(function(value){
 					// 		return value;
