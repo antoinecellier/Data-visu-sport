@@ -1,5 +1,5 @@
 {
-  "name": "dataviz-sport",
+  "name": "data-visu-sport",
   "version": "0.1.0",
   "description": "Visualisation de données des licenciés sportifs, par département, en France",
   "main": "index.js",
