@@ -169,7 +169,7 @@ if ($lines){
 				//En tête
 				if ($key>1){
 					for ($i=2; $i < 9; $i++) {
-						$return['datas'][''.$cells[0].'']['sport'][$colums[$i]]['nbEquipement'] = trim($cells[$i]);
+						$return['datas'][''.$cells[0].'']['sport'][$colums[$i]]['nbEquipement'] = trim(str_replace(',', '.', $cells[$i]));
 					}
 				}
 			}

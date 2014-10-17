@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-//Bibliothèque compass
+// Bibliothèques compass
 @import "compass";
 @import "compass/css3";
 @import "compass/reset";
@@ -12,14 +12,14 @@
 @import "fonts";
 
 // Importation du sprite
-@import 'icon/*.png';
+@import "icon/*.png";
 @include all-icon-sprites(true);
 $icon-sprite-dimensions: true;
 
 body{
-	@include font($black,14px ,$aspergit,normal); 
+	@include font($black,14px ,$aspergit,normal);
 }
- 
+
 #borderTop {
 	position: fixed;
 	top: 0;
@@ -61,17 +61,21 @@ body{
 }
 
 svg {
-    display:block;
-    overflow:hidden;/* fix IE */
-    margin-top: -70px;
+	display:block;
+	overflow:hidden;/* fix IE */
+	// margin-top: -50px;
+}
+
+.oneStatDep svg {
+	margin-top: -85px;
 }
 
 .departement {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .departement:hover {
-    fill: black;
+	fill: black;
 }
 
 .textPathDep{
@@ -92,52 +96,44 @@ svg {
 	}
 
 	.infoNbLicenciesCurrentDep{
-		padding-top: 25px;	
-		@include font($black,35px ,$aspergit,normal);	
+		padding-top: 25px;
+		@include font($black,35px ,$aspergit,normal);
 	}
 
 	.infoLibelleNbLicenciesCurrentDep{
 		@include font($black,30px ,$aspergit,normal);
 		border-bottom: 1px solid $black;
-		padding-bottom: 25px;		
-	} 
+		padding-bottom: 25px;
+	}
 
 	.oneStatDep{
-		.listIcon{ 
-			margin-top: 10px;
+		.listIcon{
 			.iconSport{
-				float: left;
-				margin-left: 27px; 
-			}
-			.firstIcon{
-				float: left; 
-				margin-left: 15px;				
+				display: inline-block;
+				margin:10px;
+				width: 30px;
 			}
 		}
 
 		.listNbLicencies{
-			display: block;
-			height: 20px;
-			margin-top: 45px;
-			@include font($black,18px ,$aspergit-light,normal);
+			@include font($black,18px ,$aspergit-bold,normal);
 			.chiffre{
+				display: inline-block;
 				text-align: center;
-				width: 40px;
-				float: left;
-				margin-left: 10px;
+				margin:10px;
+				width: 30px;
 			}
 		}
 	}
-} 
+}
 
 .titleSite{
 	border-top: 1px solid $black;
 	text-align: center;
 	margin-top: 100px;
 	.hightTitle{
-		padding-top: 50px;	
+		padding-top: 50px;
 		@include font($black,40px ,"Oswald",normal);
-		margin-top: 25px;
 	}
 	.subTitle{
 		@include font($black,30px ,$aspergit,normal);
@@ -150,74 +146,76 @@ svg {
 
 #chart{
 	.bar{
-		float: left;
+		margin:10px;
+		width: 30px;
 		background: $black;
 	}
 }
 
-
 /* Sticky footer */
 #compteurs{
 	.blockDepartements{
-	  height: 100px;
-	  width: 200px;
-	  background-color: $black;
-	  z-index: 9999;
-	  position: absolute; 
-	  bottom: 30px; 
-	  left: 30px;
-	  text-align: center;
-
-	  .nbDepartements{
-		@include font($white,35px ,"Oswald",normal);
-		display: block;
-		font-weight: bold;
-		line-height: 60px;
-	  }
-	  .libelleNbDepartements{
-		@include font($white,15px ,$aspergit,normal); 
-	  }
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		.nbDepartements{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbDepartements{
+			@include font($white,15px ,$aspergit,normal);
+		}
 	}
 
 	.blockInstallations{
-	  height: 100px;
-	  width: 200px;
-	  background-color: $black;
-	  z-index: 9999;
-	  position: absolute; 
-	  bottom: 30px; 
-	  left: 230px;
-	  text-align: center;
-	  border-left: 1px solid white;
-	  .nbInstallations{
-		@include font($white,35px ,"Oswald",normal);
-		display: block;
-		font-weight: bold;
-		line-height: 60px;
-	  }
-	  .libelleNbInstallations{
-		@include font($white,15px ,$aspergit,normal); 
-	  }
-	}	
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: absolute;
+		bottom: 30px;
+		left: 230px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbInstallations{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbInstallations{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
 
 	.blockLicences{
-	  height: 100px;
-	  width: 150px;
-	  background-color: $black;
-	  z-index: 9999;
-	  position: absolute; 
-	  bottom: 30px; 
-	  left: 430px;
-	  text-align: center;
-	  border-left: 1px solid white;
-	  .nbLicencies{
-		@include font($white,35px ,"Oswald",normal);
-		display: block;
-		font-weight: bold;
-		line-height: 60px;
-	  }
-	  .libelleNbLicencies{
-		@include font($white,15px ,$aspergit,normal); 
-	  }
-	}	
+		height: 100px;
+		width: 150px;
+		background-color: $black;
+		z-index: 9999;
+		position: absolute;
+		bottom: 30px;
+		left: 430px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbLicencies{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbLicencies{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
 }

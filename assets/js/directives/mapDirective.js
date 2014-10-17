@@ -2,81 +2,68 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 	function (DatasService, $http) {
 		return {
 			restrict: 'E',
-		    scope: {
-		    	data: '='
-		    },
-		    link: function (scope, element, $scope) {
-			      var width = 800;
-			      var height = 700;
-			      var datas = scope.data;
+			scope: {
+				data: '='
+			},
+			link: function (scope, element, $scope) {
+				var width = 800;
+				var height = 700;
+				var datas = scope.data;
 
-			      initTitleDiv();
-			      /* 
-			       * On créait un nouvel objet path qui permet 
-			       * de manipuler les données géographiques.
-			       */
-			      var path = d3.geo.path();
+				initTitleDiv();
+				/*
+				 * On créait un nouvel objet path qui permet de manipuler les données géographiques.
+				 */
+				var path = d3.geo.path();
 
-			      // On définit les propriétés de la projection à utiliser
-			      var projection = d3.geo.conicConformal() // Lambert-93
-			                      .center([2.454071, 47.279229]) // On centre la carte sur la France
-			                      .scale(4000)
-			                      .translate([width / 2, height / 2]);
+				// On définit les propriétés de la projection à utiliser
+				var projection = d3.geo.conicConformal() // Lambert-93
+								.center([2.454071, 47.279229]) // On centre la carte sur la France
+								.scale(4000)
+								.translate([width / 2, height / 2]);
 
-			      path.projection(projection); // On assigne la projection au path
+				// On assigne la projection au path
+				path.projection(projection);
 
-			      /*
-			       * On créait un nouvel élément svg à la racine de notre div #map,
-			       * définie plus haut dans le HTML
-			       */
-			      var svg = d3.select(element[0]).append("svg")
-			          .attr("width", width)
-			          .attr("height", height);
+				/*
+				 * On créait un nouvel élément svg à la racine de notre div #map, définie plus haut dans le HTML
+				 */
+				var svg = d3.select(element[0]).append("svg")
+					.attr("width", width)
+					.attr("height", height);
 
+				/*
+				 * On créait un groupe SVG qui va accueillir tous nos départements
+				 */
+				var deps = svg
+					.append("g")
+					.attr("id", "departements")
+					.attr("transform", "translate(0,0)scale(-1,-1)");;
 
-			      /*
-			       * On créait un groupe SVG qui va accueillir
-			       * tous nos départements
-			       */
-			      var deps = svg
-			          .append("g")
-			          .attr("id", "departements")
-			          .attr("transform", "translate(0,0)scale(-1,-1)");;
+					deps
+					.transition()
+					.duration(2000)
+					.attr("transform", "translate(0,0)scale(1,1)");
 
-			          deps
-			          .transition()
-			          .duration(2000)
-			          .attr("transform", "translate(0,0)scale(1,1)");
+				/*
+				 * On charge les données GeoJSON
+				 */
+				var loadData =function(datas) {
 
+					/*
+					 * On "bind" un élément SVG path pour chaque entrée du tableau features de notre objet geojson
+					 */
 
-			      /*
-			       * On charge les données GeoJSON
-			       */
-			      var loadData =  function(datas) {
-	
+					//On créait un ColorScale, qui va nous permettre d'assigner plus tard une couleur de fond à chacun de nos départements
+					//var colorScale = d3.scale.category20c();
 
-			      	/*
-			         * On "bind" un élément SVG path pour chaque entrée
-			         * du tableau features de notre objet geojson
-			         */
-
-
-			        //  * On créait un ColorScale, qui va nous
-			        //  * permettre d'assigner plus tard une
-			        //  * couleur de fond à chacun de nos
-			        //  * départements
-			         
-			        // var colorScale = d3.scale.category20c();
-
-			        /*
-			         * Pour chaque entrée du tableau feature, on
-			         * créait un élément SVG path, avec les
-			         * propriétés suivantes
-			         */
-			        var features = deps
-			        .selectAll("path")
-			        .data(datas.features)
-			 		.enter()
+					/*
+					 * Pour chaque entrée du tableau feature, on créait un élément SVG path, avec les propriétés suivantes
+					 */
+					var features = deps
+					.selectAll("path")
+					.data(datas.features)
+					.enter()
 					.append("path")
 					.attr('class', 'departement')
 					.attr('fill','white')
@@ -87,232 +74,235 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 						return displayStatDep( d );
 					}).on('mouseout', function( d ){
 						return removeStatDep( d );
-					});		
-			      };
+					});
+				};
 
-			      loadData(datas);
+				loadData(datas);
 
+				/*
+				 * Fonction qui affichage les stats à la volé pour un département
+				 */
+				function displayStatDep(d){
+					d3.selectAll('.titleSite').remove();
+					d3.selectAll('.oneStatDep').remove();
 
-			      /* Fonction qui affichage les stats à la volé
-			       * pour un département
-			      */
-			      function displayStatDep(d)
-			      {
-						d3.selectAll('.titleSite').remove();
-			      		d3.selectAll('.oneStatDep').remove();
-						
-						var dataCurrentDep = getDataDep(d.properties.CODE_DEPT);
-						var frameInfoDep = d3.selectAll('.infoCurrentDep');
-						
-						var divOneDep = 
-						  frameInfoDep
-						  .append('div')
-						  .attr('class','oneStatDep');
+					var dataCurrentDep = getDataDep(d.properties.CODE_DEPT);
+					var frameInfoDep = d3.selectAll('.infoCurrentDep');
 
-						  divOneDep.append('div')
-						  .attr('class','infoNumCurrentDep')
-						  .text(function() {
-						  	return "#"+d.properties.CODE_DEPT; 
-						  });
+					var divOneDep = frameInfoDep
+						.append('div')
+						.attr('class','oneStatDep');
 
-						  divOneDep.append('h1')
-						  .attr('class','infoNomCurrentDep')
-						  .text(function() {
-						  	return d.properties.NOM_DEPT; 
-						  });
+					divOneDep.append('div')
+						.attr('class','infoNumCurrentDep')
+						.text(function() {
+							return "#"+d.properties.CODE_DEPT;
+						});
 
-						  var listIcon = divOneDep.append('div')
-						  						  .attr('class','listIcon');
+					divOneDep.append('h1')
+						.attr('class','infoNomCurrentDep')
+						.text(function() {
+							return d.properties.NOM_DEPT;
+						});
 
-						  	listIcon.append('div')
-						  			.attr('class','iconSport icon-football');
-						  	listIcon.append('div')
-						  		.attr('class','iconSport icon-tennis');		  
+					var divTwoDep = divOneDep.append('div')
+						.attr('class','listContent');
 
-						  	listIcon.append('div')
-						  		.attr('class','iconSport icon-combat');		  
+					var listIcon = divTwoDep.append('div')
+						.attr('class','listIcon');
 
-						  	listIcon.append('div')
-						  		.attr('class','iconSport icon-basketball');		  
+					listIcon.append('div')
+						.attr('class','iconSport icon-football');
+					listIcon.append('div')
+						.attr('class','iconSport icon-tennis');
 
-						  	listIcon.append('div')
-						  		.attr('class','iconSport icon-horse');		  
+					listIcon.append('div')
+						.attr('class','iconSport icon-combat');
 
-						  	listIcon.append('div')
-						  		.attr('class','iconSport icon-basketball');	
+					listIcon.append('div')
+						.attr('class','iconSport icon-basketball');
 
-						  	listIcon.append('div')
-						  		.attr('class','iconSport icon-golf');		  
+					listIcon.append('div')
+						.attr('class','iconSport icon-horse');
 
+					listIcon.append('div')
+						.attr('class','iconSport icon-basketball');
 
- 						  var listNbLicencies = divOneDep.append('div')
-						  						  .attr('class','listNbLicencies');
-						  for(var sport in dataCurrentDep)
-						  {
-						  	console.log(dataCurrentDep[sport]);
-						  	listNbLicencies.append('span')
-						  		 .attr('class','chiffre')
-						  		 .text(function (){
-						  		 		return dataCurrentDep[sport].nbLicence;
-						  			   });
-						  }
+					listIcon.append('div')
+						.attr('class','iconSport icon-golf');
 
-						  // SVG chart nbLicence / Sport / Departement
-						  var svgOneDep = divOneDep.append('svg')
-						  .attr("width","360")
-						  .attr("height","300");
+					var listNbLicencies = divTwoDep.append('div')
+						.attr('class','listNbLicencies');
 
-						  var gOneDep = svgOneDep.append('g');
-						  var spaceBarX = 35;
-						  for(var sport in dataCurrentDep)
-						  {
-						  	console.log(dataCurrentDep[sport]);
-						  	gOneDep.append('rect')
-						  		 .attr('class','bar')
-						  		 .attr('x', spaceBarX)
-						  		 .attr('y', '100')
-						  		 .attr('width', '29')
-						  		 .attr('height', parseInt(dataCurrentDep[sport].nbLicence) / 3);
+					for(var sport in dataCurrentDep)
+					{
+						// console.log(dataCurrentDep[sport]);
+						listNbLicencies.append('span')
+							.attr('class','chiffre')
+							.text(function (){
+						 		return dataCurrentDep[sport].nbLicence;
+							});
+					}
 
-						  		 spaceBarX += 45;
-						  }
+					// SVG chart nbLicence / Sport / Departement
+					var svgOneDep = divOneDep.append('svg')
+						.attr("width","360")
+						.attr("height","300");
 
-/*						  divOneDep.append('div')
-						  .attr('class','infoNbLicenciesCurrentDep')
-						  .text(function() {
-						  	return 759 - (6 * d.properties.ID_GEOFLA); 
-						  });
+					var gOneDep = svgOneDep.append('g');
+					var spaceBarX = 15;
+					for(var sport in dataCurrentDep)
+					{
+						//215 max taille possible
+						//588 max valeur possible dans les sport
+						//TODO : récup le max par département dans l'idéal..
 
-						  divOneDep.append('div')
-						  .attr('class','infoLibelleNbLicenciesCurrentDep')
-						  .text(function() {
-						  	return "licenciés"; 
-						  });	*/  						  	      	
-			      }
+						// console.log(dataCurrentDep[sport]);
+						gOneDep.append('rect')
+							.attr('class','bar')
+							.attr('x', spaceBarX)
+							.attr('y', '100')
+							.attr('width', '30')
+							.attr('height', parseInt(dataCurrentDep[sport].nbLicence) * 215 / 588);
 
-			      /* Fonction qui retire les stats à la volé
-			       * pour un département
-			      */
-			      function removeStatDep(d)
-			      {
-						// d3.selectAll('.oneStatDep').remove();
-						initTitleDiv();
-			      }
+							spaceBarX += 50;
+					}
 
-			      /*
-			      *	Initialise la div "titre du site"
-			      */
-			      function initTitleDiv(){
-						var frameInfoDep = d3.selectAll('.infoCurrentDep');
-						
-						var titleSite = frameInfoDep
-						  		.append('div')
-						  		.attr('class','titleSite');
+					/**
+					divOneDep.append('div')
+						.attr('class','infoNbLicenciesCurrentDep')
+						.text(function() {
+							return 759 - (6 * d.properties.ID_GEOFLA);
+						});
 
-						var hightTitle = titleSite
-						  		.append('div')
-						  		.attr('class','hightTitle')
-						  		.text(function(){
-						  			return "INSTALLATIONS & LICENCIES SPORTIFS"
-						  		});
+					divOneDep.append('div')
+						.attr('class','infoLibelleNbLicenciesCurrentDep')
+						.text(function() {
+							return "licenciés";
+						});
+					**/
+				}
 
-						titleSite.append('div')
-						  		.attr('class','subTitle')
-						  		.text(function(){
-						  			return "en France métropolitaine"
-						  		});
-			      }
-			      /*
-			       * Fonction qui permet de zoomer sur la carte
-			       * en cliquant sur les départements
-			       * Récupéré ici : http://bl.ocks.org/mbostock/2206340
-			       */
-			      var centered;
-			      function countyClickHandler(d) {
-			        // hideMap();
-			        // showDepData();
-			        // initViewOneDepartement( d );
-			        var x, y, k;
+				/*
+				 * Fonction qui retire les stats à la volé pour un département
+				 */
+				function removeStatDep(d) {
+					// d3.selectAll('.oneStatDep').remove();
+					initTitleDiv();
+				}
 
-			        if (d && centered !== d) {
-			          var centroid = path.centroid(d);
-			          x = centroid[0];
-			          y = centroid[1];
-			          k = 5;
-			          centered = d;
-			        } else {
-			          x = width / 2;
-			          y = height / 2;
-			          k = 1;
-			          centered = null;
-			        }
+				/*
+				 *	Initialise la div "titre du site"
+				*/
+				function initTitleDiv(){
+					var frameInfoDep = d3.selectAll('.infoCurrentDep');
 
-			        deps.selectAll("path")
-			          .classed("active", centered && function(d) { return d === centered; });
+					var titleSite = frameInfoDep
+						.append('div')
+						.attr('class','titleSite');
 
-			        var trStr = "translate(" + width / 2 + "," + height / 2 + ")" +
-			          "scale(" + k + ")translate(" + -x + "," + -y + ")";
-			        
-			        deps.transition()
-			          .duration(1000)
-			          .attr("transform", trStr);
+					var hightTitle = titleSite
+						.append('div')
+						.attr('class','hightTitle')
+						.text(function(){
+							return "INSTALLATIONS & LICENCIES SPORTIFS"
+						});
 
-			      };
+					titleSite.append('div')
+						.attr('class','subTitle')
+						.text(function(){
+							return "en France métropolitaine"
+						});
+				}
 
+				/*
+				 * Fonction qui permet de zoomer sur la carte en cliquant sur les départements Récupéré ici : http://bl.ocks.org/mbostock/2206340
+				 */
+				var centered;
+				function countyClickHandler(d) {
+					// hideMap();
+					// showDepData();
+					// initViewOneDepartement( d );
+					var x, y, k;
 
-			      // Cache la vue pour un departement
-			      function hideDepData(){ 
-			        d3.select('#departementData')
-			          .style("visibility", "hidden");
-			      }
+					if (d && centered !== d) {
+						var centroid = path.centroid(d);
+						x = centroid[0];
+						y = centroid[1];
+						k = 5;
+						centered = d;
+					} else {
+						x = width / 2;
+						y = height / 2;
+						k = 1;
+						centered = null;
+					}
 
-			      // Affiche la vue pour un departement
-			      function showDepData(){
-			       d3.select('#departementData')
-			         .style("visibility", "visible");
-			     }
+					deps.selectAll("path")
+						.classed("active", centered && function(d) { return d === centered; });
 
-			      // Cache la vue de la carte de France
-			      function hideMap(){ 
-			        d3.select('#map')
-			          .style("visibility", "hidden")
-			          .style("position", "absolute");
-			      }
+					var trStr = "translate(" + width / 2 + "," + height / 2 + ")" + "scale(" + k + ")translate(" + -x + "," + -y + ")";
 
-			      // Affiche la vue de la carte de France
-			      function showMap(){ 
-			        d3.select('#map')
-			          .style("visibility", "visible");
-			      }
+					deps.transition()
+						.duration(1000)
+						.attr("transform", trStr);
 
-			      // Affichage d'une vue pour un département
-			      function initViewOneDepartement( data ){
-			        var chefLieu = data.properties.NOM_CHF;
-			        d3.selectAll('div#departementData')
-			          .append('div')
-			          .attr('class','oneDepartement '+data.properties.CODE_DEPT);
+				};
 
-			          d3.selectAll('.oneDepartement')
-			            .append('h1')
-			            .text(function(data){
-			              return " Chef lieu : "+chefLieu;
-			            });
-			      }
+				// Cache la vue pour un departement
+				function hideDepData(){
+					d3.select('#departementData')
+					.style("visibility", "hidden");
+				}
 
-			      // Données d'un département
-			      function getDataDep( id ){
-			      	var dataDep;
+				// Affiche la vue pour un departement
+				function showDepData(){
+					d3.select('#departementData')
+					.style("visibility", "visible");
+				}
 
-			      	DatasService.getDatas().then(function(sportData){
+				// Cache la vue de la carte de France
+				function hideMap(){
+					d3.select('#map')
+					.style("visibility", "hidden")
+					.style("position", "absolute");
+				}
+
+				// Affiche la vue de la carte de France
+				function showMap(){
+					d3.select('#map')
+					.style("visibility", "visible");
+				}
+
+				// Affichage d'une vue pour un département
+				function initViewOneDepartement( data ){
+					var chefLieu = data.properties.NOM_CHF;
+					d3.selectAll('div#departementData')
+						.append('div')
+						.attr('class','oneDepartement '+data.properties.CODE_DEPT);
+
+					d3.selectAll('.oneDepartement')
+						.append('h1')
+						.text(function(data){
+							return " Chef lieu : "+chefLieu;
+						});
+				}
+
+				// Données d'un département
+				function getDataDep(id){
+					var dataDep;
+
+					DatasService.getDatas().then(function(sportData){
 						$scope.dataSport = sportData;
 					});
-			      	angular.forEach($scope.dataSport, function(index){
-			      		if(index.id == id)
-			      			dataDep = index.sport
-			      	});
-			      	return dataDep;
-			      }
-			}	
+					angular.forEach($scope.dataSport, function(index){
+						if(index.id == id)
+							dataDep = index.sport
+					});
+					return dataDep;
+				}
+			}
 		}
 	}
+
 ]);

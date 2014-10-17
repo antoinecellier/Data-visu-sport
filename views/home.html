@@ -1,0 +1,30 @@
+<div class="container">
+		<div class="row" ng-controller="MapDepartementCtrl">
+			<div class="col-md-4">
+			<section class="infoCurrentDep">
+			</section>
+		</div>
+			<div class="col-md-8">
+				<section ng-if="loadingIsDone">
+					<d3map data='dataMap'></d3map>
+					<div id="chart"></div>
+				</section>
+		</div>
+	</div>
+
+	<section id="compteurs">
+		<div class="blockDepartements">
+				<span class="nbDepartements" ng-bind="nbDepartements">0</span>
+				<span class="libelleNbDepartements">Départements</span>
+		</div>
+		<div class="blockInstallations">
+				<span class="nbInstallations" ng-bind="nbEquipementsTotal">0</span>
+				<span class="libelleNbInstallations">Installations</span>
+		</div>
+		<div class="blockLicences">
+				<span class="nbLicencies" ng-bind="nbLicencesTotal">0</span>
+				<span class="libelleNbLicencies">Licenciés</span>
+		</div>
+	</section>
+
+</div>
