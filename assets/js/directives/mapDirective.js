@@ -187,7 +187,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 				 * Fonction qui retire les stats à la volé pour un département
 				 */
 				function removeStatDep(d) {
-					// d3.selectAll('.oneStatDep').remove();
+					d3.selectAll('.oneStatDep').remove();
 					initTitleDiv();
 				}
 
