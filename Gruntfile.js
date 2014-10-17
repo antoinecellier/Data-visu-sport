@@ -17,7 +17,7 @@ module.exports = function (grunt){
 			dev: {
 				options: {
 					script: 'server.js',
-					port: 8080,
+					port: 3000,
 					delay: 1000,
 					background: true
 				}
