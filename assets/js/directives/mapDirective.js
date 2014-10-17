@@ -5,7 +5,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 		    scope: {
 		    	data: '='
 		    },
-		    link: function (scope, element) {
+		    link: function (scope, element, $scope) {
 			      var width = 800;
 			      var height = 700;
 			      var datas = scope.data;
@@ -101,6 +101,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 						d3.selectAll('.titleSite').remove();
 			      		d3.selectAll('.oneStatDep').remove();
 						
+						var dataCurrentDep = getDataDep(d.properties.CODE_DEPT);
 						var frameInfoDep = d3.selectAll('.infoCurrentDep');
 						
 						var divOneDep = 
@@ -120,7 +121,63 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 						  	return d.properties.NOM_DEPT; 
 						  });
 
-						  divOneDep.append('div')
+						  var listIcon = divOneDep.append('div')
+						  						  .attr('class','listIcon');
+
+						  	listIcon.append('div')
+						  			.attr('class','iconSport icon-football');
+						  	listIcon.append('div')
+						  		.attr('class','iconSport icon-tennis');		  
+
+						  	listIcon.append('div')
+						  		.attr('class','iconSport icon-combat');		  
+
+						  	listIcon.append('div')
+						  		.attr('class','iconSport icon-basketball');		  
+
+						  	listIcon.append('div')
+						  		.attr('class','iconSport icon-horse');		  
+
+						  	listIcon.append('div')
+						  		.attr('class','iconSport icon-basketball');	
+
+						  	listIcon.append('div')
+						  		.attr('class','iconSport icon-golf');		  
+
+
+ 						  var listNbLicencies = divOneDep.append('div')
+						  						  .attr('class','listNbLicencies');
+						  for(var sport in dataCurrentDep)
+						  {
+						  	console.log(dataCurrentDep[sport]);
+						  	listNbLicencies.append('span')
+						  		 .attr('class','chiffre')
+						  		 .text(function (){
+						  		 		return dataCurrentDep[sport].nbLicence;
+						  			   });
+						  }
+
+						  // SVG chart nbLicence / Sport / Departement
+						  var svgOneDep = divOneDep.append('svg')
+						  .attr("width","360")
+						  .attr("height","300");
+
+						  var gOneDep = svgOneDep.append('g');
+						  var spaceBarX = 35;
+						  for(var sport in dataCurrentDep)
+						  {
+						  	console.log(dataCurrentDep[sport]);
+						  	gOneDep.append('rect')
+						  		 .attr('class','bar')
+						  		 .attr('x', spaceBarX)
+						  		 .attr('y', '100')
+						  		 .attr('width', '29')
+						  		 .attr('height', parseInt(dataCurrentDep[sport].nbLicence) / 3);
+
+						  		 spaceBarX += 45;
+						  }
+
+/*						  divOneDep.append('div')
 						  .attr('class','infoNbLicenciesCurrentDep')
 						  .text(function() {
 						  	return 759 - (6 * d.properties.ID_GEOFLA); 
@@ -130,7 +187,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 						  .attr('class','infoLibelleNbLicenciesCurrentDep')
 						  .text(function() {
 						  	return "licenciés"; 
-						  });	  						  	      	
+						  });	*/  						  	      	
 			      }
 
 			      /* Fonction qui retire les stats à la volé
@@ -138,7 +195,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 			      */
 			      function removeStatDep(d)
 			      {
-						d3.selectAll('.oneStatDep').remove();
+						// d3.selectAll('.oneStatDep').remove();
 						initTitleDiv();
 			      }
 
@@ -241,7 +298,21 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 			              return " Chef lieu : "+chefLieu;
 			            });
 			      }
-			}
+
+			      // Données d'un département
+			      function getDataDep( id ){
+			      	var dataDep;
+
+			      	DatasService.getDatas().then(function(sportData){
+						$scope.dataSport = sportData;
+					});
+			      	angular.forEach($scope.dataSport, function(index){
+			      		if(index.id == id)
+			      			dataDep = index.sport
+			      	});
+			      	return dataDep;
+			      }
+			}	
 		}
 	}
 ]);

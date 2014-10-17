@@ -8,7 +8,7 @@ module.exports = function (grunt){
 					cssDir: ['assets/stylesheets'],
 					imagesDir: ['assets/sass/img'],
 					fontsDir: ['assets/fonts'],
-					relativeAssets: false,
+					relativeAssets: true,
 		        	noLineComments: false
 		      	}
 		   } 

@@ -41,7 +41,7 @@ MapDepartement.provider("DatasService", function (){
 					},
 					getDatas: function() {
 						var promiseEnd = datas.then(function(value){
-							return value;
+							return value.data.datas;
 						}, function(reason){
 							return $q.reject(reason);
 						});
@@ -51,7 +51,7 @@ MapDepartement.provider("DatasService", function (){
 					getDataDep: function( id ) {
 						var departement = 
 							ManageData.getDatas().then(function(sportDep){
-								angular.forEach(sportDep.data.datas, function(index) {
+								angular.forEach(sportDep, function(index) {
 								  if(index.id == id){
 								  	departement = index;
 								  }
@@ -95,7 +95,7 @@ MapDepartement.provider("DatasWidgetsService", function (){
 						var NbLicenceTotal = 
 							DatasService.getDatas().then(function(datas){
 								var nbLicenciesTotal = 0;
-								angular.forEach(datas.data.datas, function (index){
+								angular.forEach(datas, function (index){
 									angular.forEach(index.sport, function (index){
 										if(!isNaN(index.nbLicence))
 											nbLicenciesTotal += parseInt(index.nbLicence);

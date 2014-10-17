@@ -71,33 +71,88 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: "Aspergit";
-  src: url('/assets/fonts/aspergit-webfont.ttf?1411213900') format('truetype');
+  src: url('../fonts/aspergit-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Light";
-  src: url('/assets/fonts/aspergit_light-webfont.ttf?1411213900') format('truetype');
+  src: url('../fonts/aspergit_light-webfont.ttf?1413410360') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Light Italic";
-  src: url('/assets/fonts/aspergit_light_italic-webfont.ttf?1411213900') format('truetype');
+  src: url('../fonts/aspergit_light_italic-webfont.ttf?1413410360') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Italic";
-  src: url('/assets/fonts/aspergit_italic-webfont.ttf?1411213900') format('truetype');
+  src: url('../fonts/aspergit_italic-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Bold Italic";
-  src: url('/assets/fonts/aspergit_bold_italic_0-webfont.ttf?1411213900') format('truetype');
+  src: url('../fonts/aspergit_bold_italic_0-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Bold";
-  src: url('/assets/fonts/aspergit_bold-webfont.ttf?1411213900') format('truetype');
+  src: url('../fonts/aspergit_bold-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Blenda Script";
-  src: url('/assets/fonts/blenda_script-webfont.ttf?1411305359') format('truetype');
+  src: url('../fonts/blenda_script-webfont.ttf?1413410360') format('truetype');
 }
-/* line 13, ../sass/base.scss */
+/* line 96, icon/*.png */
+.icon-sprite, .icon-basketball, .icon-combat-old, .icon-combat, .icon-football, .icon-golf, .icon-horse, .icon-tennis {
+  background-image: url('../sass/img/icon-s43ad4029b8.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-basketball {
+  background-position: 0 0;
+  height: 24px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-combat-old {
+  background-position: 0 -24px;
+  height: 24px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-combat {
+  background-position: 0 -48px;
+  height: 24px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-football {
+  background-position: 0 -72px;
+  height: 24px;
+  width: 22px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-golf {
+  background-position: 0 -96px;
+  height: 24px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-horse {
+  background-position: 0 -120px;
+  height: 24px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-tennis {
+  background-position: 0 -144px;
+  height: 24px;
+  width: 24px;
+}
+
+/* line 19, ../sass/base.scss */
 body {
   color: #050505;
   font-size: 14px;
@@ -105,7 +160,7 @@ body {
   letter-spacing: normal;
 }
 
-/* line 17, ../sass/base.scss */
+/* line 23, ../sass/base.scss */
 #borderTop {
   position: fixed;
   top: 0;
@@ -116,7 +171,7 @@ body {
   z-index: 9999;
 }
 
-/* line 27, ../sass/base.scss */
+/* line 33, ../sass/base.scss */
 #borderLeft {
   position: fixed;
   top: 0;
@@ -127,7 +182,7 @@ body {
   z-index: 9999;
 }
 
-/* line 37, ../sass/base.scss */
+/* line 43, ../sass/base.scss */
 #borderBottom {
   position: fixed;
   bottom: 0;
@@ -138,7 +193,7 @@ body {
   z-index: 9999;
 }
 
-/* line 47, ../sass/base.scss */
+/* line 53, ../sass/base.scss */
 #borderRight {
   position: fixed;
   top: 0;
@@ -149,7 +204,7 @@ body {
   z-index: 9999;
 }
 
-/* line 57, ../sass/base.scss */
+/* line 63, ../sass/base.scss */
 svg {
   display: block;
   overflow: hidden;
@@ -157,27 +212,27 @@ svg {
   margin-top: -70px;
 }
 
-/* line 63, ../sass/base.scss */
+/* line 69, ../sass/base.scss */
 .departement {
   cursor: pointer;
 }
 
-/* line 67, ../sass/base.scss */
+/* line 73, ../sass/base.scss */
 .departement:hover {
   fill: black;
 }
 
-/* line 71, ../sass/base.scss */
+/* line 77, ../sass/base.scss */
 .textPathDep {
   font-size: 12px;
 }
 
-/* line 75, ../sass/base.scss */
+/* line 81, ../sass/base.scss */
 .infoCurrentDep {
   margin-top: 100px;
   text-align: center;
 }
-/* line 78, ../sass/base.scss */
+/* line 84, ../sass/base.scss */
 .infoCurrentDep .infoNomCurrentDep {
   color: #050505;
   font-size: 40px;
@@ -186,14 +241,14 @@ svg {
   border-bottom: 1px solid #050505;
   padding-bottom: 25px;
 }
-/* line 84, ../sass/base.scss */
+/* line 90, ../sass/base.scss */
 .infoCurrentDep .infoNumCurrentDep {
   color: #050505;
   font-size: 40px;
   font-family: "Oswald";
   letter-spacing: normal;
 }
-/* line 88, ../sass/base.scss */
+/* line 94, ../sass/base.scss */
 .infoCurrentDep .infoNbLicenciesCurrentDep {
   padding-top: 25px;
   color: #050505;
@@ -201,7 +256,7 @@ svg {
   font-family: "Aspergit";
   letter-spacing: normal;
 }
-/* line 93, ../sass/base.scss */
+/* line 99, ../sass/base.scss */
 .infoCurrentDep .infoLibelleNbLicenciesCurrentDep {
   color: #050505;
   font-size: 30px;
@@ -210,14 +265,45 @@ svg {
   border-bottom: 1px solid #050505;
   padding-bottom: 25px;
 }
+/* line 106, ../sass/base.scss */
+.infoCurrentDep .oneStatDep .listIcon {
+  margin-top: 10px;
+}
+/* line 108, ../sass/base.scss */
+.infoCurrentDep .oneStatDep .listIcon .iconSport {
+  float: left;
+  margin-left: 27px;
+}
+/* line 112, ../sass/base.scss */
+.infoCurrentDep .oneStatDep .listIcon .firstIcon {
+  float: left;
+  margin-left: 15px;
+}
+/* line 118, ../sass/base.scss */
+.infoCurrentDep .oneStatDep .listNbLicencies {
+  display: block;
+  height: 20px;
+  margin-top: 45px;
+  color: #050505;
+  font-size: 18px;
+  font-family: "Aspergit Light";
+  letter-spacing: normal;
+}
+/* line 123, ../sass/base.scss */
+.infoCurrentDep .oneStatDep .listNbLicencies .chiffre {
+  text-align: center;
+  width: 40px;
+  float: left;
+  margin-left: 10px;
+}
 
-/* line 100, ../sass/base.scss */
+/* line 133, ../sass/base.scss */
 .titleSite {
   border-top: 1px solid #050505;
   text-align: center;
   margin-top: 100px;
 }
-/* line 104, ../sass/base.scss */
+/* line 137, ../sass/base.scss */
 .titleSite .hightTitle {
   padding-top: 50px;
   color: #050505;
@@ -226,20 +312,26 @@ svg {
   letter-spacing: normal;
   margin-top: 25px;
 }
-/* line 109, ../sass/base.scss */
+/* line 142, ../sass/base.scss */
 .titleSite .subTitle {
   color: #050505;
   font-size: 30px;
   font-family: "Aspergit";
   letter-spacing: normal;
-  margin-top: 25px;
+  margin-top: 15px;
   font-style: italic;
   border-bottom: 1px solid #050505;
   padding-bottom: 50px;
 }
 
+/* line 152, ../sass/base.scss */
+#chart .bar {
+  float: left;
+  background: #050505;
+}
+
 /* Sticky footer */
-/* line 123, ../sass/base.scss */
+/* line 161, ../sass/base.scss */
 #compteurs .blockDepartements {
   height: 100px;
   width: 200px;
@@ -250,7 +342,7 @@ svg {
   left: 30px;
   text-align: center;
 }
-/* line 133, ../sass/base.scss */
+/* line 171, ../sass/base.scss */
 #compteurs .blockDepartements .nbDepartements {
   color: #ffffff;
   font-size: 35px;
@@ -260,14 +352,14 @@ svg {
   font-weight: bold;
   line-height: 60px;
 }
-/* line 139, ../sass/base.scss */
+/* line 177, ../sass/base.scss */
 #compteurs .blockDepartements .libelleNbDepartements {
   color: #ffffff;
   font-size: 15px;
   font-family: "Aspergit";
   letter-spacing: normal;
 }
-/* line 144, ../sass/base.scss */
+/* line 182, ../sass/base.scss */
 #compteurs .blockInstallations {
   height: 100px;
   width: 200px;
@@ -279,7 +371,7 @@ svg {
   text-align: center;
   border-left: 1px solid white;
 }
-/* line 154, ../sass/base.scss */
+/* line 192, ../sass/base.scss */
 #compteurs .blockInstallations .nbInstallations {
   color: #ffffff;
   font-size: 35px;
@@ -289,14 +381,14 @@ svg {
   font-weight: bold;
   line-height: 60px;
 }
-/* line 160, ../sass/base.scss */
+/* line 198, ../sass/base.scss */
 #compteurs .blockInstallations .libelleNbInstallations {
   color: #ffffff;
   font-size: 15px;
   font-family: "Aspergit";
   letter-spacing: normal;
 }
-/* line 165, ../sass/base.scss */
+/* line 203, ../sass/base.scss */
 #compteurs .blockLicences {
   height: 100px;
   width: 150px;
@@ -308,7 +400,7 @@ svg {
   text-align: center;
   border-left: 1px solid white;
 }
-/* line 175, ../sass/base.scss */
+/* line 213, ../sass/base.scss */
 #compteurs .blockLicences .nbLicencies {
   color: #ffffff;
   font-size: 35px;
@@ -318,7 +410,7 @@ svg {
   font-weight: bold;
   line-height: 60px;
 }
-/* line 181, ../sass/base.scss */
+/* line 219, ../sass/base.scss */
 #compteurs .blockLicences .libelleNbLicencies {
   color: #ffffff;
   font-size: 15px;

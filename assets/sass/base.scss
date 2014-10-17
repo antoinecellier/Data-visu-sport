@@ -10,10 +10,16 @@
 @import "compass/layout";
 @import "colors";
 @import "fonts";
+
+// Importation du sprite
+@import 'icon/*.png';
+@include all-icon-sprites(true);
+$icon-sprite-dimensions: true;
+
 body{
 	@include font($black,14px ,$aspergit,normal); 
 }
-
+ 
 #borderTop {
 	position: fixed;
 	top: 0;
@@ -94,8 +100,35 @@ svg {
 		@include font($black,30px ,$aspergit,normal);
 		border-bottom: 1px solid $black;
 		padding-bottom: 25px;		
+	} 
+
+	.oneStatDep{
+		.listIcon{ 
+			margin-top: 10px;
+			.iconSport{
+				float: left;
+				margin-left: 27px; 
+			}
+			.firstIcon{
+				float: left; 
+				margin-left: 15px;				
+			}
+		}
+
+		.listNbLicencies{
+			display: block;
+			height: 20px;
+			margin-top: 45px;
+			@include font($black,18px ,$aspergit-light,normal);
+			.chiffre{
+				text-align: center;
+				width: 40px;
+				float: left;
+				margin-left: 10px;
+			}
+		}
 	}
-}
+} 
 
 .titleSite{
 	border-top: 1px solid $black;
@@ -115,7 +148,12 @@ svg {
 	}
 }
 
-
+#chart{
+	.bar{
+		float: left;
+		background: $black;
+	}
+}
 
 
 /* Sticky footer */
