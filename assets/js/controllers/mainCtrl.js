@@ -6,19 +6,12 @@ DataVizSport.controller("MainCtrl", ['$routeParams','$scope',
  		$window.history.back();
 	};
 
-	$scope.next = function (){
-
+	$scope.showInfo = function (){
+        $scope.styleInfo = {'visibility' : 'visible'};
 	};
 
-    var original = $location.path;
-    $location.path = function (path, reload) {
-        if (reload === false) {
-            var lastRoute = $route.current;
-            var un = $rootScope.$on('$locationChangeSuccess', function () {
-                $route.current = lastRoute;
-                un();
-            });
-        }
-        return original.apply($location, [path]);
+    $scope.closeInfo = function (){
+        $scope.styleInfo = {'visibility' : 'hidden'};
     };
+
 }]);

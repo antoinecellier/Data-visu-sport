@@ -688,3 +688,56 @@ svg {
 #next:hover polygon {
   fill: #050505;
 }
+
+/* line 145, ../sass/base.scss */
+#info {
+  cursor: pointer;
+  padding: 3px;
+  position: fixed;
+  top: 0;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  background: #050505;
+  z-index: 99999;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 157, ../sass/base.scss */
+#info:hover {
+  background: #ffffff;
+}
+/* line 160, ../sass/base.scss */
+#info:hover path {
+  fill: #050505;
+}
+
+/* Information frame */
+/* line 166, ../sass/base.scss */
+.information {
+  visibility: hidden;
+  position: fixed;
+  background: url('../sass/img/bck-info-window.png?1352305078') repeat;
+  height: 100%;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  z-index: 999999;
+}
+/* line 175, ../sass/base.scss */
+.information .title {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: "Aspergit Bold";
+  letter-spacing: normal;
+  width: 300px;
+  margin-top: 100px;
+}
