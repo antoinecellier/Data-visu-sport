@@ -7,6 +7,7 @@
 			h2{
 				@include font($black,40px ,$aspergit-bold,normal);
 				line-height: 80px;
+				text-transform: uppercase;
 			}
 			h3{
 				@include font($black,35px ,$aspergit,normal);
@@ -27,15 +28,18 @@
 
 		.link-start{
 			margin-top: 100px;
-			width: 100px;
+			text-align:center;
+			h4 {
+				text-transform: uppercase;
+			}
 			a{
 				@include font($black,20px ,$aspergit,10px);
 				text-decoration: none;
 
 				svg{
-					display: block;
-					margin: 0 auto;
+					display: inherit;
 					margin-top: 10px;
+					margin-left: -15px;
 					@include transition-property(margin-top);
 					@include transition-duration(1s);
 				}

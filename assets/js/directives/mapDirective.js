@@ -127,7 +127,7 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 						.attr('class','iconSport icon-horse');
 
 					listIcon.append('div')
-						.attr('class','iconSport icon-basketball');
+						.attr('class','iconSport icon-petanque');
 
 					listIcon.append('div')
 						.attr('class','iconSport icon-golf');
