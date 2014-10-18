@@ -1,4 +1,4 @@
-MapDepartement.controller("MapDepartementCtrl",['$interval', '$scope', '$rootScope', 'DatasService', 'DatasWidgetsService',
+DataVizSport.controller("MapDepartementCtrl",['$interval', '$scope', '$rootScope', 'DatasService', 'DatasWidgetsService',
 	function($interval, $scope, $rootScope, DatasService, DatasWidgetsService) {
 
 		/**

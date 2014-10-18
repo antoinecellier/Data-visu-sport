@@ -1,4 +1,4 @@
-MapDepartement.provider("DatasService", function (){
+DataVizSport.provider("DatasService", function (){
 	this.$get = function($http, $q){
 
 		var departements;
@@ -69,7 +69,7 @@ MapDepartement.provider("DatasService", function (){
 
 });
 
-MapDepartement.provider("DatasWidgetsService", function (){
+DataVizSport.provider("DatasWidgetsService", function (){
 	this.$get = function($http, $q, DatasService){
 
 		var ManageWidgetData = {
@@ -143,6 +143,21 @@ MapDepartement.provider("DatasWidgetsService", function (){
 						return $q.reject(reason);
 					});
 				return NbEquipementTotal;
+			},
+						/**
+			 * Fonction : Récupération du nombre d'équipement pour un departement
+			 */
+			getNbEquipementsParDepartement: function( id ) {
+				var nbEquipementsParDepartement =
+					DatasService.getDataDep(id).then(function(dataDep){
+						console.log(dataDep);
+						var nbEquipements = 0;
+						angular.forEach(dataDep.sport, function (index){
+							nbEquipements += parseInt(index.nbEquipement);
+						});
+						return nbEquipements;
+					});
+				return nbEquipementsParDepartement;
 			}
 
 		};

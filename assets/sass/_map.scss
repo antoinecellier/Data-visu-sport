@@ -1,0 +1,153 @@
+.oneStatDep svg {
+	margin-top: -85px;
+}
+
+.departement {
+	cursor: pointer;
+}
+
+.departement:hover {
+	fill: black;
+}
+
+.textPathDep{
+	font-size: 12px;
+}
+
+.infoCurrentDep{
+	margin-top: 100px;
+	text-align: center;
+	.infoNomCurrentDep{
+		@include font($black,40px ,$aspergit,normal);
+		border-bottom: 1px solid $black;
+		padding-bottom: 25px;
+	}
+
+	.infoNumCurrentDep{
+		@include font($black,40px ,"Oswald",normal);
+	}
+
+	.infoNbLicenciesCurrentDep{
+		padding-top: 25px;
+		@include font($black,35px ,$aspergit,normal);
+	}
+
+	.infoLibelleNbLicenciesCurrentDep{
+		@include font($black,30px ,$aspergit,normal);
+		border-bottom: 1px solid $black;
+		padding-bottom: 25px;
+	}
+
+	.oneStatDep{
+		.listIcon{
+			.iconSport{
+				display: inline-block;
+				margin:10px;
+				width: 30px;
+			}
+		}
+
+		.listNbLicencies{
+			@include font($black,18px ,$aspergit-bold,normal);
+			.chiffre{
+				display: inline-block;
+				text-align: center;
+				margin:10px;
+				width: 30px;
+			}
+		}
+	}
+}
+
+.titleSite{
+	border-top: 1px solid $black;
+	text-align: center;
+	margin-top: 100px;
+	.hightTitle{
+		padding-top: 50px;
+		@include font($black,40px ,"Oswald",normal);
+	}
+	.subTitle{
+		@include font($black,30px ,$aspergit,normal);
+		margin-top: 15px;
+		font-style: italic;
+		border-bottom: 1px solid $black;
+		padding-bottom: 50px;
+	}
+}
+
+#chart{
+	.bar{
+		margin:10px;
+		width: 30px;
+		background: $black;
+	}
+}
+
+/* Sticky footer */
+#compteurs{
+	.blockDepartements{
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		.nbDepartements{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbDepartements{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
+
+	.blockInstallations{
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 230px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbInstallations{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbInstallations{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
+
+	.blockLicences{
+		height: 100px;
+		width: 150px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 430px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbLicencies{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbLicencies{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
+}

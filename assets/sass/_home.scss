@@ -1,0 +1,49 @@
+.home{
+	height: 100%;
+	.home-content{
+		.landing-text{
+			margin-top: 200px;
+			text-align: center;
+			h2{
+				@include font($black,40px ,$aspergit-bold,normal);
+				line-height: 80px;
+			}
+			h3{
+				@include font($black,35px ,$aspergit,normal);
+				line-height: 80px;
+			}
+			h4{
+				@include font($black,25px ,$aspergit-light-italic,normal);
+			}
+
+			.listIconLanding{
+				margin-top: 10px;
+				margin-bottom: 10px;
+				div{
+					float: left;
+				}
+			}
+		}
+
+		.link-start{
+			margin-top: 100px;
+			width: 100px;
+			a{
+				@include font($black,20px ,$aspergit,10px);
+				text-decoration: none;
+
+				svg{
+					display: block;
+					margin: 0 auto;
+					margin-top: 10px;
+					@include transition-property(margin-top);
+					@include transition-duration(1s);
+				}
+
+				&:hover svg{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

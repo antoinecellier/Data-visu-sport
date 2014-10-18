@@ -16,10 +16,22 @@
 @include all-icon-sprites(true);
 $icon-sprite-dimensions: true;
 
+
+@import "home";
+@import "map";
+@import "oneDep";
+
+body, html{
+	height : 100%;
+}
+
 body{
 	@include font($black,14px ,$aspergit,normal);
 }
 
+.view{
+	height : 100%;
+}
 #borderTop {
 	position: fixed;
 	top: 0;
@@ -63,159 +75,69 @@ body{
 svg {
 	display:block;
 	overflow:hidden;/* fix IE */
-	// margin-top: -50px;
 }
 
-.oneStatDep svg {
-	margin-top: -85px;
-}
+#svgMapDep{	margin-top: -58px; }
 
-.departement {
+/*	NAVIGATION */
+#home-link{
+	border-right: 1px solid $white;
 	cursor: pointer;
-}
-
-.departement:hover {
-	fill: black;
-}
-
-.textPathDep{
-	font-size: 12px;
-}
-
-.infoCurrentDep{
-	margin-top: 100px;
 	text-align: center;
-	.infoNomCurrentDep{
-		@include font($black,40px ,$aspergit,normal);
-		border-bottom: 1px solid $black;
-		padding-bottom: 25px;
-	}
-
-	.infoNumCurrentDep{
-		@include font($black,40px ,"Oswald",normal);
-	}
-
-	.infoNbLicenciesCurrentDep{
-		padding-top: 25px;
-		@include font($black,35px ,$aspergit,normal);
-	}
-
-	.infoLibelleNbLicenciesCurrentDep{
-		@include font($black,30px ,$aspergit,normal);
-		border-bottom: 1px solid $black;
-		padding-bottom: 25px;
-	}
-
-	.oneStatDep{
-		.listIcon{
-			.iconSport{
-				display: inline-block;
-				margin:10px;
-				width: 30px;
-			}
-		}
-
-		.listNbLicencies{
-			@include font($black,18px ,$aspergit-bold,normal);
-			.chiffre{
-				display: inline-block;
-				text-align: center;
-				margin:10px;
-				width: 30px;
-			}
-		}
+	position: fixed;
+	top: 0;
+	left: 30px;
+	height: 30px;
+	width: 100px;
+	background: $black;
+	z-index: 99999;
+	@include font($white,15px ,$aspergit,5px);
+	text-decoration: none;
+	line-height: 30px;
+	@include transition-property(background, color);
+	@include transition-duration(0.5s);
+	&:hover{
+		background: $white;
+		color: $black;
 	}
 }
 
-.titleSite{
-	border-top: 1px solid $black;
-	text-align: center;
-	margin-top: 100px;
-	.hightTitle{
-		padding-top: 50px;
-		@include font($black,40px ,"Oswald",normal);
+#back{
+	cursor: pointer;
+	padding: 3px;
+	position: fixed;
+	top: 0;
+	left: 130px;
+	height: 30px;
+	width: 30px;
+	background: $black;
+	z-index: 99999;
+	@include transition-property(background);
+	@include transition-duration(0.5s);
+	&:hover{
+		background: $white;
 	}
-	.subTitle{
-		@include font($black,30px ,$aspergit,normal);
-		margin-top: 15px;
-		font-style: italic;
-		border-bottom: 1px solid $black;
-		padding-bottom: 50px;
-	}
-}
-
-#chart{
-	.bar{
-		margin:10px;
-		width: 30px;
-		background: $black;
+	&:hover polygon{
+		fill: $black;
 	}
 }
 
-/* Sticky footer */
-#compteurs{
-	.blockDepartements{
-		height: 100px;
-		width: 200px;
-		background-color: $black;
-		z-index: 9999;
-		position: absolute;
-		bottom: 30px;
-		left: 30px;
-		text-align: center;
-		text-transform: uppercase;
-		.nbDepartements{
-			@include font($white,35px ,"Oswald",normal);
-			display: block;
-			font-weight: bold;
-			line-height: 60px;
-		}
-		.libelleNbDepartements{
-			@include font($white,15px ,$aspergit,normal);
-		}
+#next{
+	cursor: pointer;
+	padding: 3px;
+	position: fixed;
+	top: 0;
+	left: 160px;
+	height: 30px;
+	width: 30px;
+	background: $black;
+	z-index: 99999;
+	@include transition-property(background);
+	@include transition-duration(0.5s);
+	&:hover{
+		background: $white;
 	}
-
-	.blockInstallations{
-		height: 100px;
-		width: 200px;
-		background-color: $black;
-		z-index: 9999;
-		position: absolute;
-		bottom: 30px;
-		left: 230px;
-		text-align: center;
-		border-left: 1px solid white;
-		text-transform: uppercase;
-		.nbInstallations{
-			@include font($white,35px ,"Oswald",normal);
-			display: block;
-			font-weight: bold;
-			line-height: 60px;
-		}
-		.libelleNbInstallations{
-			@include font($white,15px ,$aspergit,normal);
-		}
-	}
-
-	.blockLicences{
-		height: 100px;
-		width: 150px;
-		background-color: $black;
-		z-index: 9999;
-		position: absolute;
-		bottom: 30px;
-		left: 430px;
-		text-align: center;
-		border-left: 1px solid white;
-		text-transform: uppercase;
-		.nbLicencies{
-			@include font($white,35px ,"Oswald",normal);
-			display: block;
-			font-weight: bold;
-			line-height: 60px;
-		}
-		.libelleNbLicencies{
-			@include font($white,15px ,$aspergit,normal);
-		}
+	&:hover polygon{
+		fill: $black;
 	}
 }

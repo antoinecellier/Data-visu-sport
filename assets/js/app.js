@@ -1,9 +1,10 @@
-var MapDepartement = angular.module('DataVizSport', ['ngRoute']);
+var DataVizSport = angular.module('DataVizSport', ['ngRoute']);
 
-MapDepartement.config(function($routeProvider){
+DataVizSport.config(function($routeProvider){
 	$routeProvider
 	.when('/', {templateUrl: 'views/home.html', controller: 'MapDepartementCtrl'})
-	.when('/departements/:id', {templateUrl: 'views/departements.html', controller: 'MapDepartementCtrl'})
+	.when('/map', {templateUrl: 'views/map.html', controller: 'MapDepartementCtrl'})
+	.when('/departement/:id', {templateUrl: 'views/departement.html', controller: 'DepartementCtrl'})
 
 	//url qu'il ne connait pas
 	.otherwise({redirectTo: '/'});

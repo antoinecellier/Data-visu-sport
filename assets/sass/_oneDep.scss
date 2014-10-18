@@ -1,0 +1,63 @@
+#compteurs{
+	.blockNumDep{
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		.numDep{
+			@include font($white,45px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 100px;
+		}
+	}
+
+	.blockInstallations{
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 230px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbInstallations{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbInstallations{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
+
+	.blockLicences{
+		height: 100px;
+		width: 150px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 430px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbLicencies{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbLicencies{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
+}

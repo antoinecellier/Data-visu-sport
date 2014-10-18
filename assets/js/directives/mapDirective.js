@@ -1,5 +1,5 @@
-MapDepartement.directive('d3map', ['DatasService','$http',
-	function (DatasService, $http) {
+DataVizSport.directive('d3map', ['DatasService','$http','$location',
+	function (DatasService, $http, $location) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -30,7 +30,8 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 				 */
 				var svg = d3.select(element[0]).append("svg")
 					.attr("width", width)
-					.attr("height", height);
+					.attr("height", height)
+					.attr("id","svgMapDep");
 
 				/*
 				 * On créait un groupe SVG qui va accueillir tous nos départements
@@ -220,33 +221,7 @@ MapDepartement.directive('d3map', ['DatasService','$http',
 				 */
 				var centered;
 				function countyClickHandler(d) {
-					// hideMap();
-					// showDepData();
-					// initViewOneDepartement( d );
-					var x, y, k;
-
-					if (d && centered !== d) {
-						var centroid = path.centroid(d);
-						x = centroid[0];
-						y = centroid[1];
-						k = 5;
-						centered = d;
-					} else {
-						x = width / 2;
-						y = height / 2;
-						k = 1;
-						centered = null;
-					}
-
-					deps.selectAll("path")
-						.classed("active", centered && function(d) { return d === centered; });
-
-					var trStr = "translate(" + width / 2 + "," + height / 2 + ")" + "scale(" + k + ")translate(" + -x + "," + -y + ")";
-
-					deps.transition()
-						.duration(1000)
-						.attr("transform", trStr);
-
+					$location.path('/departement/'+d.properties.CODE_DEPT);
 				};
 
 				// Cache la vue pour un departement
