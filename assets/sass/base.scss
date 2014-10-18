@@ -26,49 +26,17 @@ body, html{
 
 body{
 	@include font($black,14px ,$aspergit,normal);
+	border: solid $grey 30px;
+}
+
+a,
+a:active,
+a:hover {
+	outline: 0;
 }
 
 .view{
 	height : 100%;
-}
-#borderTop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 30px;
-	background: $grey;
-	z-index: 9999;
-}
-
-#borderLeft {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 30px;
-	background: $grey;
-	z-index: 9999;
-}
-
-#borderBottom {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	height: 30px;
-	background: $grey;
-	z-index: 9999;
-}
-
-#borderRight {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	width: 30px;
-	background: $grey;
-	z-index: 9999;
 }
 
 svg {
@@ -189,12 +157,21 @@ svg {
 			div{
 				display: table-cell;
 				text-align: center;
-				width: 11%;
+				width: 13%;
 				span{
 					display: inline-block;
-					width: 30px;
+				}
+				.sportTitle {
+					padding: 0 8px 0 8px;
+					font-size: 16px;
+					span {
+						font-size: 19px;
+						display: inherit;
+					}
 				}
 			}
 		}
 	}
+
+
 }

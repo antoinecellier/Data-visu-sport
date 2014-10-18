@@ -23,18 +23,13 @@
 
 	<body ng-app="DataVizSport">
 		<div ng-controller="MainCtrl">
-			<div id="borderTop"></div>
-			<div id="borderLeft"></div>
-			<div id="borderBottom"></div>
-			<div id="borderRight"></div>
-
 			<a href="#/" id="home-link">home</a>
 			<a ng-click="back()" id="back">
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 width="25px" height="25px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
 					<g>
 						<g>
-							<polygon fill="white" points="45.463,59.579 17.066,31.999 45.463,4.421 46.934,5.935 20.099,31.999 46.934,58.064 		"/>
+							<polygon fill="white" points="45.463,59.579 17.066,31.999 45.463,4.421 46.934,5.935 20.099,31.999 46.934,58.064"/>
 						</g>
 					</g>
 				</svg>
@@ -59,44 +54,64 @@
 					<div class="row">
 						<div class="center-block">
 							<div class="table">
-							 <div class="table-row">
-								  <div>
-								  		<span class="icon-w-football"></span>
-								  </div>
-								  <div>
-								  		<span class="icon-w-tennis"></span>
-								  </div>
-								  <div>
-								  		<span class="icon-w-combat"></span>
-								  </div>
-								  <div>
-								  		<span class="icon-w-basketball"></span>
-								  </div>
-								  <div>
-								  		<span class="icon-w-horse"></span>
-								  </div>
-								  <div>
-								  		<span class="icon-w-petanque"></span>
-								  </div>
-								  <div>
-								  		<span class="icon-w-golf"></span>
-								  </div>
-							 </div>
-							 <div class="table-row">
-								  <div class="text-football">football</div>
-								  <div class="text-tennis">tennis</div>
-								  <div class="text-combat">sports de combats</div>
-								  <div class="text-basketball">basketball</div>
-								  <div class="text-horse">équitation</div>
-								  <div class="text-petanque">pétanque</div>
-								  <div class="text-golf">golf</div>
-							 </div>
-</div>
+								<div class="table-row">
+									<div>
+										<span class="icon-w-football"></span>
+									</div>
+									<div>
+										<span class="icon-w-tennis"></span>
+									</div>
+									<div>
+										<span class="icon-w-combat"></span>
+									</div>
+									<div>
+										<span class="icon-w-basketball"></span>
+									</div>
+									<div>
+										<span class="icon-w-horse"></span>
+									</div>
+									<div>
+										<span class="icon-w-petanque"></span>
+									</div>
+									<div>
+										<span class="icon-w-golf"></span>
+									</div>
+								</div>
+								<div class="table-row">
+									<div class="text-football">
+										<p class="sportTitle"><span>Football</span><br>
+											Équipements :<br>Terrains de grands jeux</p>
+									</div>
+									<div class="text-tennis">
+										<p class="sportTitle"><span>Tennis</span><br>
+											Équipements :<br>Courts de tennis</p>
+									</div>
+									<div class="text-combat">
+										<p class="sportTitle"><span>Judo et combat</span><br>
+											Équipements :<br>Salles de combat</p>
+									</div>
+									<div class="text-basketball">
+										<p class="sportTitle"><span>Basketball</span><br>
+											Équipements :<br>Balles ou terrains de petits jeux</p>
+									</div>
+									<div class="text-horse">
+										<p class="sportTitle"><span>Équitation</span><br>
+											Équipements :<br>Carri&egrave;res et man&egrave;ges</p>
+									</div>
+									<div class="text-petanque">
+										<p class="sportTitle"><span>P&eacute;tanque</span><br>
+											Équipements :<br>Boulodromes</p>
+									</div>
+									<div class="text-golf">
+										<p class="sportTitle"><span>Golf</span><br>
+											Équipements :<br>Parcours et practices de golf</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
 
 			<div ng-view class="view" ng-click="closeInfo()"></div>
 
