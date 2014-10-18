@@ -2,7 +2,7 @@
 	height: 100%;
 	.home-content{
 		.landing-text{
-			margin-top: 200px;
+			margin-top: 5%;
 			text-align: center;
 			h2{
 				@include font($black,40px ,$aspergit-bold,normal);
@@ -17,12 +17,26 @@
 				@include font($black,25px ,$aspergit-light-italic,normal);
 			}
 
-			.listIconLanding{
+			.icon-ecusson{
+				margin: 0 auto; 
+			}
+
+			.separator-1{
+				display: block;
+				width: 80%;
+				margin: 0 auto;
+				height: 1px;
+				background: $black;
 				margin-top: 10px;
+			}
+			.separator-2{
+				display: block;
+				width: 60%;
+				margin: 0 auto;
+				height: 1px;
+				background: $black;
+				margin-top: 30px;
 				margin-bottom: 10px;
-				div{
-					float: left;
-				}
 			}
 		}
 
@@ -39,7 +53,7 @@
 				svg{
 					display: inherit;
 					margin-top: 10px;
-					margin-left: -15px;
+					margin-left: -13px;
 					@include transition-property(margin-top);
 					@include transition-duration(1s);
 				}

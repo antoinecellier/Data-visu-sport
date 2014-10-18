@@ -16,7 +16,6 @@
 @include all-icon-sprites(true);
 $icon-sprite-dimensions: true;
 
-
 @import "home";
 @import "map";
 @import "oneDep";
@@ -150,7 +149,7 @@ svg {
 	right: 30px;
 	height: 30px;
 	width: 30px;
-	background: $black;
+	background: image-url("bck-info-window.png") repeat;
 	z-index: 99999;
 	@include transition-property(background);
 	@include transition-duration(0.5s);
@@ -164,12 +163,13 @@ svg {
 
 /* Information frame */
 .information{
+	cursor: image-url("cross.png"), auto;
 	visibility: hidden;
 	position: fixed;
-	background: image-url('bck-info-window.png') repeat;
+	background: image-url("bck-info-window.png") repeat;
 	height: 100%;
 	width: 100%;
-	@include opacity(0.7);
+	@include opacity(0.8);
 	z-index: 999999;
 
 	.title{
@@ -177,5 +177,24 @@ svg {
 		@include font($white,40px ,$aspergit-bold,normal);
 		width: 300px;
 		margin-top: 100px;
+	}
+
+	.table{
+		margin-top: 20%;
+		display : table;
+		@include font($white,28px ,$aspergit-bold,normal);
+		.table-row{
+			display : table-row;
+			text-align: center;
+			div{
+				display: table-cell;
+				text-align: center;
+				width: 11%;
+				span{
+					display: inline-block;
+					width: 30px;
+				}
+			}
+		}
 	}
 }

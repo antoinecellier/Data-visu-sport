@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
-/* line 5, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,135 +26,198 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 @font-face {
   font-family: "Aspergit";
-  src: url('../fonts/aspergit-webfont.ttf?1413559459') format('truetype');
+  src: url('../fonts/aspergit-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Light";
-  src: url('../fonts/aspergit_light-webfont.ttf?1413559459') format('truetype');
+  src: url('../fonts/aspergit_light-webfont.ttf?1413410360') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Light Italic";
-  src: url('../fonts/aspergit_light_italic-webfont.ttf?1413559459') format('truetype');
+  src: url('../fonts/aspergit_light_italic-webfont.ttf?1413410360') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Italic";
-  src: url('../fonts/aspergit_italic-webfont.ttf?1413559459') format('truetype');
+  src: url('../fonts/aspergit_italic-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Bold Italic";
-  src: url('../fonts/aspergit_bold_italic_0-webfont.ttf?1413559459') format('truetype');
+  src: url('../fonts/aspergit_bold_italic_0-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Bold";
-  src: url('../fonts/aspergit_bold-webfont.ttf?1413559459') format('truetype');
+  src: url('../fonts/aspergit_bold-webfont.ttf?1413410359') format('truetype');
 }
 @font-face {
   font-family: "Blenda Script";
-  src: url('../fonts/blenda_script-webfont.ttf?1413559459') format('truetype');
+  src: url('../fonts/blenda_script-webfont.ttf?1413410360') format('truetype');
 }
-/* line 104, icon/*.png */
-.icon-sprite, .icon-baseball, .icon-basketball, .icon-combat, .icon-football, .icon-golf, .icon-horse, .icon-petanque, .icon-tennis {
-  background-image: url('../sass/img/icon-sf643964544.png');
+/* line 176, icon/*.png */
+.icon-sprite, .icon-baseball, .icon-basketball, .icon-combat, .icon-ecusson, .icon-football, .icon-golf, .icon-horse, .icon-petanque, .icon-tennis, .icon-w-baseball, .icon-w-basketball, .icon-w-combat, .icon-w-football, .icon-w-golf, .icon-w-horse, .icon-w-petanque, .icon-w-tennis {
+  background-image: url('../sass/img/icon-s89b38b3548.png');
   background-repeat: no-repeat;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-baseball {
   background-position: 0 0;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-basketball {
   background-position: 0 -28px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-combat {
   background-position: 0 -56px;
   height: 27px;
   width: 30px;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-football {
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-ecusson {
   background-position: 0 -83px;
+  height: 123px;
+  width: 128px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-football {
+  background-position: 0 -206px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-golf {
-  background-position: 0 -111px;
+  background-position: 0 -234px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-horse {
-  background-position: 0 -139px;
+  background-position: 0 -262px;
   height: 28px;
   width: 23px;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-petanque {
-  background-position: 0 -167px;
+  background-position: 0 -290px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-tennis {
-  background-position: 0 -195px;
+  background-position: 0 -318px;
+  height: 28px;
+  width: 28px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-baseball {
+  background-position: 0 -346px;
+  height: 28px;
+  width: 28px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-basketball {
+  background-position: 0 -374px;
+  height: 28px;
+  width: 28px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-combat {
+  background-position: 0 -402px;
+  height: 27px;
+  width: 30px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-football {
+  background-position: 0 -429px;
+  height: 28px;
+  width: 28px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-golf {
+  background-position: 0 -457px;
+  height: 28px;
+  width: 28px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-horse {
+  background-position: 0 -485px;
+  height: 28px;
+  width: 23px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-petanque {
+  background-position: 0 -513px;
+  height: 28px;
+  width: 28px;
+}
+
+/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-w-tennis {
+  background-position: 0 -541px;
   height: 28px;
   width: 28px;
 }
@@ -165,7 +228,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 4, ../sass/_home.scss */
 .home .home-content .landing-text {
-  margin-top: 200px;
+  margin-top: 5%;
   text-align: center;
 }
 /* line 7, ../sass/_home.scss */
@@ -193,24 +256,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   letter-spacing: normal;
 }
 /* line 20, ../sass/_home.scss */
-.home .home-content .landing-text .listIconLanding {
+.home .home-content .landing-text .icon-ecusson {
+  margin: 0 auto;
+}
+/* line 24, ../sass/_home.scss */
+.home .home-content .landing-text .separator-1 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background: #050505;
   margin-top: 10px;
+}
+/* line 32, ../sass/_home.scss */
+.home .home-content .landing-text .separator-2 {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  height: 1px;
+  background: #050505;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
-/* line 23, ../sass/_home.scss */
-.home .home-content .landing-text .listIconLanding div {
-  float: left;
-}
-/* line 29, ../sass/_home.scss */
+/* line 43, ../sass/_home.scss */
 .home .home-content .link-start {
   margin-top: 100px;
   text-align: center;
 }
-/* line 32, ../sass/_home.scss */
+/* line 46, ../sass/_home.scss */
 .home .home-content .link-start h4 {
   text-transform: uppercase;
 }
-/* line 35, ../sass/_home.scss */
+/* line 49, ../sass/_home.scss */
 .home .home-content .link-start a {
   color: #050505;
   font-size: 20px;
@@ -218,11 +295,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   letter-spacing: 10px;
   text-decoration: none;
 }
-/* line 39, ../sass/_home.scss */
+/* line 53, ../sass/_home.scss */
 .home .home-content .link-start a svg {
   display: inherit;
   margin-top: 10px;
-  margin-left: -15px;
+  margin-left: -13px;
   -moz-transition-property: margin-top;
   -o-transition-property: margin-top;
   -webkit-transition-property: margin-top;
@@ -232,7 +309,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 47, ../sass/_home.scss */
+/* line 61, ../sass/_home.scss */
 .home .home-content .link-start a:hover svg {
   margin-top: 20px;
 }
@@ -523,12 +600,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   letter-spacing: normal;
 }
 
-/* line 24, ../sass/base.scss */
+/* line 23, ../sass/base.scss */
 body, html {
   height: 100%;
 }
 
-/* line 28, ../sass/base.scss */
+/* line 27, ../sass/base.scss */
 body {
   color: #050505;
   font-size: 14px;
@@ -536,12 +613,12 @@ body {
   letter-spacing: normal;
 }
 
-/* line 32, ../sass/base.scss */
+/* line 31, ../sass/base.scss */
 .view {
   height: 100%;
 }
 
-/* line 35, ../sass/base.scss */
+/* line 34, ../sass/base.scss */
 #borderTop {
   position: fixed;
   top: 0;
@@ -552,7 +629,7 @@ body {
   z-index: 9999;
 }
 
-/* line 45, ../sass/base.scss */
+/* line 44, ../sass/base.scss */
 #borderLeft {
   position: fixed;
   top: 0;
@@ -563,7 +640,7 @@ body {
   z-index: 9999;
 }
 
-/* line 55, ../sass/base.scss */
+/* line 54, ../sass/base.scss */
 #borderBottom {
   position: fixed;
   bottom: 0;
@@ -574,7 +651,7 @@ body {
   z-index: 9999;
 }
 
-/* line 65, ../sass/base.scss */
+/* line 64, ../sass/base.scss */
 #borderRight {
   position: fixed;
   top: 0;
@@ -585,20 +662,20 @@ body {
   z-index: 9999;
 }
 
-/* line 75, ../sass/base.scss */
+/* line 74, ../sass/base.scss */
 svg {
   display: block;
   overflow: hidden;
   /* fix IE */
 }
 
-/* line 80, ../sass/base.scss */
+/* line 79, ../sass/base.scss */
 #svgMapDep {
   margin-top: -58px;
 }
 
 /*	NAVIGATION */
-/* line 83, ../sass/base.scss */
+/* line 82, ../sass/base.scss */
 #home-link {
   border-right: 1px solid #ffffff;
   cursor: pointer;
@@ -625,13 +702,13 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 99, ../sass/base.scss */
+/* line 98, ../sass/base.scss */
 #home-link:hover {
   background: #ffffff;
   color: #050505;
 }
 
-/* line 105, ../sass/base.scss */
+/* line 104, ../sass/base.scss */
 #back {
   cursor: pointer;
   padding: 3px;
@@ -651,16 +728,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 117, ../sass/base.scss */
+/* line 116, ../sass/base.scss */
 #back:hover {
   background: #ffffff;
 }
-/* line 120, ../sass/base.scss */
+/* line 119, ../sass/base.scss */
 #back:hover polygon {
   fill: #050505;
 }
 
-/* line 125, ../sass/base.scss */
+/* line 124, ../sass/base.scss */
 #next {
   cursor: pointer;
   padding: 3px;
@@ -680,16 +757,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 137, ../sass/base.scss */
+/* line 136, ../sass/base.scss */
 #next:hover {
   background: #ffffff;
 }
-/* line 140, ../sass/base.scss */
+/* line 139, ../sass/base.scss */
 #next:hover polygon {
   fill: #050505;
 }
 
-/* line 145, ../sass/base.scss */
+/* line 144, ../sass/base.scss */
 #info {
   cursor: pointer;
   padding: 3px;
@@ -698,7 +775,7 @@ svg {
   right: 30px;
   height: 30px;
   width: 30px;
-  background: #050505;
+  background: url('../sass/img/bck-info-window.png?1413647239') repeat;
   z-index: 99999;
   -moz-transition-property: background;
   -o-transition-property: background;
@@ -709,25 +786,26 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 157, ../sass/base.scss */
+/* line 156, ../sass/base.scss */
 #info:hover {
   background: #ffffff;
 }
-/* line 160, ../sass/base.scss */
+/* line 159, ../sass/base.scss */
 #info:hover path {
   fill: #050505;
 }
 
 /* Information frame */
-/* line 166, ../sass/base.scss */
+/* line 165, ../sass/base.scss */
 .information {
+  cursor: url('../sass/img/cross.png?1413658928'), auto;
   visibility: hidden;
   position: fixed;
-  background: url('../sass/img/bck-info-window.png?1352305078') repeat;
+  background: url('../sass/img/bck-info-window.png?1413647239') repeat;
   height: 100%;
   width: 100%;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
   z-index: 999999;
 }
 /* line 175, ../sass/base.scss */
@@ -740,4 +818,29 @@ svg {
   letter-spacing: normal;
   width: 300px;
   margin-top: 100px;
+}
+/* line 182, ../sass/base.scss */
+.information .table {
+  margin-top: 20%;
+  display: table;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: "Aspergit Bold";
+  letter-spacing: normal;
+}
+/* line 186, ../sass/base.scss */
+.information .table .table-row {
+  display: table-row;
+  text-align: center;
+}
+/* line 189, ../sass/base.scss */
+.information .table .table-row div {
+  display: table-cell;
+  text-align: center;
+  width: 11%;
+}
+/* line 193, ../sass/base.scss */
+.information .table .table-row div span {
+  display: inline-block;
+  width: 30px;
 }
