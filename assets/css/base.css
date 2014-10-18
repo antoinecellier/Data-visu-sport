@@ -611,35 +611,78 @@ body {
   font-size: 14px;
   font-family: "Aspergit";
   letter-spacing: normal;
-  border: solid #babdc0 30px;
 }
 
 /* line 32, ../sass/base.scss */
+#borderTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: #babdc0;
+  z-index: 9999;
+}
+
+/* line 42, ../sass/base.scss */
+#borderLeft {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  background: #babdc0;
+  z-index: 9999;
+}
+
+/* line 52, ../sass/base.scss */
+#borderBottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 30px;
+  background: #babdc0;
+  z-index: 9999;
+}
+
+/* line 62, ../sass/base.scss */
+#borderRight {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  background: #babdc0;
+  z-index: 9999;
+}
+
+/* line 72, ../sass/base.scss */
 a,
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 38, ../sass/base.scss */
+/* line 78, ../sass/base.scss */
 .view {
   height: 100%;
 }
 
-/* line 42, ../sass/base.scss */
+/* line 82, ../sass/base.scss */
 svg {
   display: block;
   overflow: hidden;
   /* fix IE */
 }
 
-/* line 47, ../sass/base.scss */
+/* line 87, ../sass/base.scss */
 #svgMapDep {
   margin-top: -58px;
 }
 
 /*	NAVIGATION */
-/* line 50, ../sass/base.scss */
+/* line 90, ../sass/base.scss */
 #home-link {
   border-right: 1px solid #ffffff;
   cursor: pointer;
@@ -666,13 +709,13 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 66, ../sass/base.scss */
+/* line 106, ../sass/base.scss */
 #home-link:hover {
   background: #ffffff;
   color: #050505;
 }
 
-/* line 72, ../sass/base.scss */
+/* line 112, ../sass/base.scss */
 #back {
   cursor: pointer;
   padding: 3px;
@@ -692,16 +735,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 84, ../sass/base.scss */
+/* line 124, ../sass/base.scss */
 #back:hover {
   background: #ffffff;
 }
-/* line 87, ../sass/base.scss */
+/* line 127, ../sass/base.scss */
 #back:hover polygon {
   fill: #050505;
 }
 
-/* line 92, ../sass/base.scss */
+/* line 132, ../sass/base.scss */
 #next {
   cursor: pointer;
   padding: 3px;
@@ -721,16 +764,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 104, ../sass/base.scss */
+/* line 144, ../sass/base.scss */
 #next:hover {
   background: #ffffff;
 }
-/* line 107, ../sass/base.scss */
+/* line 147, ../sass/base.scss */
 #next:hover polygon {
   fill: #050505;
 }
 
-/* line 112, ../sass/base.scss */
+/* line 152, ../sass/base.scss */
 #info {
   cursor: pointer;
   padding: 3px;
@@ -750,17 +793,17 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 124, ../sass/base.scss */
+/* line 164, ../sass/base.scss */
 #info:hover {
   background: #ffffff;
 }
-/* line 127, ../sass/base.scss */
+/* line 167, ../sass/base.scss */
 #info:hover path {
   fill: #050505;
 }
 
 /* Information frame */
-/* line 133, ../sass/base.scss */
+/* line 173, ../sass/base.scss */
 .information {
   cursor: url('../sass/img/cross.png?1413661940'), auto;
   visibility: hidden;
@@ -772,7 +815,7 @@ svg {
   opacity: 0.8;
   z-index: 999999;
 }
-/* line 143, ../sass/base.scss */
+/* line 183, ../sass/base.scss */
 .information .title {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
@@ -783,7 +826,7 @@ svg {
   width: 300px;
   margin-top: 100px;
 }
-/* line 150, ../sass/base.scss */
+/* line 190, ../sass/base.scss */
 .information .table {
   margin-top: 20%;
   display: table;
@@ -792,27 +835,27 @@ svg {
   font-family: "Aspergit Bold";
   letter-spacing: normal;
 }
-/* line 154, ../sass/base.scss */
+/* line 194, ../sass/base.scss */
 .information .table .table-row {
   display: table-row;
   text-align: center;
 }
-/* line 157, ../sass/base.scss */
+/* line 197, ../sass/base.scss */
 .information .table .table-row div {
   display: table-cell;
   text-align: center;
   width: 13%;
 }
-/* line 161, ../sass/base.scss */
+/* line 201, ../sass/base.scss */
 .information .table .table-row div span {
   display: inline-block;
 }
-/* line 164, ../sass/base.scss */
+/* line 204, ../sass/base.scss */
 .information .table .table-row div .sportTitle {
   padding: 0 8px 0 8px;
   font-size: 16px;
 }
-/* line 167, ../sass/base.scss */
+/* line 207, ../sass/base.scss */
 .information .table .table-row div .sportTitle span {
   font-size: 19px;
   display: inherit;
