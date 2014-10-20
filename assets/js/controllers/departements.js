@@ -1,6 +1,12 @@
 DataVizSport.controller("MapDepartementCtrl",['$interval', '$scope', '$rootScope', 'DatasService', 'DatasWidgetsService',
 	function($interval, $scope, $rootScope, DatasService, DatasWidgetsService) {
 
+		// Classe transition
+		$scope.transition = "page-map";
+		if($scope.oldRoute != "/"){
+			$scope.transition = "page-map-reload";
+		}
+
 		/**
 		 * Récupération des départements
 		 */

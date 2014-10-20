@@ -96,9 +96,26 @@ DataVizSport.directive('linechart', ['DatasService','$http','$location',
 					.attr("transform", function(d) { var translation = arcImage.centroid(d); return "translate(" + (translation[0]-14) + "," + (translation[1]-14) + ")"; })
 					.attr("width", "28px")
 					.attr("height", "28px")
-					.attr("class", function(d) { return "text-"+d.data.classe; })
+					.attr("class", function(d) { return "pathtext text-"+d.data.classe; })
 					.attr("alt", (function(d) { return d.data.classe; }))
-					.attr("xlink:href", (function(d) { return 'assets/sass/img/icon/w-' + d.data.classe + '.png'; }));
+					.attr("xlink:href", (function(d) { return 'assets/sass/img/icon/w-' + d.data.classe + '.png'; }))
+
+					//survol
+					.on('mouseover', function(d){
+						//modifie les arcs
+						path.selectAll("." + d.data.classe).attr("fill", "white");
+						path.selectAll("." + d.data.classe).style("stroke", "black").style('stroke-width', 0.5);
+
+						//modifie les images
+						path.selectAll(".text-" + d.data.classe).attr("xlink:href", (function(d) { return 'assets/sass/img/icon/' + d.data.classe + '.png'; }));
+					}).on('mouseout', function(d){
+						//modifie les arcs
+						path.selectAll("." + d.data.classe).attr("fill", "black");
+						path.selectAll("." + d.data.classe).style("stroke", "white");
+
+						//modifie les images
+						path.selectAll(".text-" + d.data.classe).attr("xlink:href", (function(d) { return 'assets/sass/img/icon/w-' + d.data.classe + '.png'; }));
+					});
 			}
 
 		}

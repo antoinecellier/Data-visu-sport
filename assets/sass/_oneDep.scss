@@ -2,7 +2,7 @@
 	margin-top: 60px;
 	text-align:center;
 	h2{
-		@include font($black,px ,spergit-bold,rmal);
+		@include font($black,40px ,$aspergit-bold,normal);
 		line-height: 80px;
 		text-transform: uppercase;
 	}
@@ -10,7 +10,7 @@
 		margin: 0 auto;
 	}
 
-	.path {
+	.path, .pathtext {
 		cursor: pointer;
 	}
 }
