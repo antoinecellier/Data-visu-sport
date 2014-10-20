@@ -4,11 +4,13 @@ DataVizSport.controller("DepartementCtrl",
 	function($routeParams, $interval, $scope, $rootScope, DatasService, DatasWidgetsService) {
 
 		$scope.numDep = $routeParams.id;
+		$scope.loadingIsDone = false;
 		/**
 		 * Récupération des données d'un departement
 		 */
 		DatasService.getDataDep($routeParams.id).then(function(dataCurrentDep){
-			console.log(dataCurrentDep);
+			$scope.dataDep = dataCurrentDep;
+			$scope.loadingIsDone = true;
 		});
 
 		/**

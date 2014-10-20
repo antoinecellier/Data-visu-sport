@@ -1,6 +1,10 @@
 <div class="container oneDep" ng-controller="DepartementCtrl">
 	<div class="row" >
-
+		<div class="center-block">
+			<section ng-if="loadingIsDone">
+				<linechart data="dataDep"></linechart>				
+			</section>
+		</div>
 	</div>
 
 	<section id="compteurs">

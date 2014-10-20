@@ -150,7 +150,6 @@ DataVizSport.provider("DatasWidgetsService", function (){
 			getNbEquipementsParDepartement: function( id ) {
 				var nbEquipementsParDepartement =
 					DatasService.getDataDep(id).then(function(dataDep){
-						console.log(dataDep);
 						var nbEquipements = 0;
 						angular.forEach(dataDep.sport, function (index){
 							nbEquipements += parseInt(index.nbEquipement);
