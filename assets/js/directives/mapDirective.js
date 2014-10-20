@@ -49,7 +49,7 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 				/*
 				 * On charge les données GeoJSON
 				 */
-				var loadData =function(datas) {
+				var loadData = function(datas) {
 
 					/*
 					 * On "bind" un élément SVG path pour chaque entrée du tableau features de notre objet geojson
@@ -121,13 +121,13 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 						.attr('class','iconSport icon-combat');
 
 					listIcon.append('div')
-						.attr('class','iconSport icon-petanque');
+						.attr('class','iconSport icon-provencal');
 
 					listIcon.append('div')
 						.attr('class','iconSport icon-basketball');
 
 					listIcon.append('div')
-						.attr('class','iconSport icon-horse');
+						.attr('class','iconSport icon-equitation');
 
 					listIcon.append('div')
 						.attr('class','iconSport icon-golf');
@@ -206,7 +206,7 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 						.append('div')
 						.attr('class','hightTitle')
 						.text(function(){
-							return "INSTALLATIONS & LICENCIES SPORTIFS"
+							return "Installation et licenciés sportifs"
 						});
 
 					titleSite.append('div')

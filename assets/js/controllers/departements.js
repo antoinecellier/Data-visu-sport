@@ -34,18 +34,6 @@ DataVizSport.controller("MapDepartementCtrl",['$interval', '$scope', '$rootScope
 			}, 20);
 		};
 
-
-		/**
-		 * Affichage du nombre de licences / département | TODO
-		 */
-		DatasWidgetsService.getNbLicenceParDepartements(10).then(function(NbLicenceParDepartement){
-			// console.log(NbLicenceParDepartement);
-		});
-		// getNbLicenceParDepartement = function(){
-
-		// }
-
-
 		/**
 		 * Récupération du nombre d'équipement total
 		 */

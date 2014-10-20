@@ -1,6 +1,4 @@
-DataVizSport.controller("DepartementCtrl",
-						['$routeParams','$interval', '$scope', 
-						 '$rootScope', 'DatasService', 'DatasWidgetsService',
+DataVizSport.controller("DepartementCtrl", ['$routeParams','$interval', '$scope', '$rootScope', 'DatasService', 'DatasWidgetsService',
 	function($routeParams, $interval, $scope, $rootScope, DatasService, DatasWidgetsService) {
 
 		// Classe transition
@@ -17,11 +15,13 @@ DataVizSport.controller("DepartementCtrl",
 		});
 
 		/**
-		 * Affichage du nombre de licences / département | TODO
+		 * Récupération du nombre de licence pour un departement
 		 */
 		DatasWidgetsService.getNbLicenceParDepartements($routeParams.id).then(function(NbLicenceDep){
 			$scope.incremChiffreLicenceDep(0 , NbLicenceDep);
 		});
+		$scope.licenciesBind = 0;
+		var intervalLicenceTot;
 		$scope.incremChiffreLicenceDep = function(nb , nbLicencesDep) {
 			intervalLicenceTot = $interval(function() {
 				//Si on arrive bientôt au bout (si le pas est supérieur au nombre total - le nombre courant, on le passe à 1)
@@ -30,7 +30,7 @@ DataVizSport.controller("DepartementCtrl",
 				else
 					nb += parseInt(nbLicencesDep/300);
 
-				$scope.nbLicencesDep = nb;
+				$scope.licenciesBind = nb;
 				if(nb >= nbLicencesDep)
 					$interval.cancel(intervalLicenceTot);
 			}, 5);
