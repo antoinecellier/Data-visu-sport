@@ -1,8 +1,9 @@
-<div class="container oneDep" ng-controller="DepartementCtrl">
-	<div class="row" >
+<div class="container" >
+	<div class="row oneDep" ng-controller="DepartementCtrl">
 		<div class="center-block">
+			<h2>Département {{ dataDep.departement }}</h2>
 			<section ng-if="loadingIsDone">
-				<linechart data="dataDep"></linechart>				
+				<linechart data="dataDep"></linechart>
 			</section>
 		</div>
 	</div>
@@ -16,7 +17,7 @@
 			<span class="libelleNbInstallations">Installations</span>
 		</div>
 		<div class="blockLicences">
-			<span class="nbLicencies" ng-bind="nbLicencesDep">0</span>
+			<span class="nbLicencies" ng-bind="licenciesBind">0</span>
 			<span class="libelleNbLicencies">Licenciés</span>
 		</div>
 	</section>

@@ -98,8 +98,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url('../fonts/blenda_script-webfont.ttf?1413559459') format('truetype');
 }
 /* line 176, icon/*.png */
-.icon-sprite, .icon-baseball, .icon-basketball, .icon-combat, .icon-ecusson, .icon-football, .icon-golf, .icon-horse, .icon-petanque, .icon-tennis, .icon-w-baseball, .icon-w-basketball, .icon-w-combat, .icon-w-football, .icon-w-golf, .icon-w-horse, .icon-w-petanque, .icon-w-tennis {
-  background-image: url('../sass/img/icon-s89b38b3548.png');
+.icon-sprite, .icon-baseball, .icon-basketball, .icon-combat, .icon-ecusson, .icon-equitation, .icon-football, .icon-golf, .icon-provencal, .icon-tennis, .icon-w-baseball, .icon-w-basketball, .icon-w-combat, .icon-w-equitation, .icon-w-football, .icon-w-golf, .icon-w-provencal, .icon-w-tennis {
+  background-image: url('../sass/img/icon-sbc74ae64db.png');
   background-repeat: no-repeat;
 }
 
@@ -132,28 +132,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-football {
+.icon-equitation {
   background-position: 0 -206px;
   height: 28px;
-  width: 28px;
+  width: 23px;
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-golf {
+.icon-football {
   background-position: 0 -234px;
   height: 28px;
   width: 28px;
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-horse {
+.icon-golf {
   background-position: 0 -262px;
   height: 28px;
-  width: 23px;
+  width: 28px;
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-petanque {
+.icon-provencal {
   background-position: 0 -290px;
   height: 28px;
   width: 28px;
@@ -188,28 +188,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-football {
+.icon-w-equitation {
   background-position: 0 -429px;
   height: 28px;
-  width: 28px;
+  width: 23px;
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-golf {
+.icon-w-football {
   background-position: 0 -457px;
   height: 28px;
   width: 28px;
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-horse {
+.icon-w-golf {
   background-position: 0 -485px;
   height: 28px;
-  width: 23px;
+  width: 28px;
 }
 
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-petanque {
+.icon-w-provencal {
   background-position: 0 -513px;
   height: 28px;
   width: 28px;
@@ -426,178 +426,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: #050505;
 }
 
-/* Sticky footer */
-/* line 89, ../sass/_map.scss */
-#compteurs .blockDepartements {
-  height: 100px;
-  width: 200px;
-  background-color: #050505;
-  z-index: 9999;
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
+/* line 1, ../sass/_oneDep.scss */
+.oneDep {
+  margin-top: 60px;
   text-align: center;
+}
+/* line 4, ../sass/_oneDep.scss */
+.oneDep h2 {
+  color: #050505;
+  font-size: px;
+  font-family: spergit-bold;
+  letter-spacing: rmal;
+  line-height: 80px;
   text-transform: uppercase;
 }
-/* line 99, ../sass/_map.scss */
-#compteurs .blockDepartements .nbDepartements {
-  color: #ffffff;
-  font-size: 35px;
-  font-family: "Oswald";
-  letter-spacing: normal;
-  display: block;
-  font-weight: bold;
-  line-height: 60px;
+/* line 9, ../sass/_oneDep.scss */
+.oneDep .graphDep {
+  margin: 0 auto;
 }
-/* line 105, ../sass/_map.scss */
-#compteurs .blockDepartements .libelleNbDepartements {
-  color: #ffffff;
-  font-size: 15px;
-  font-family: "Aspergit";
-  letter-spacing: normal;
-}
-/* line 110, ../sass/_map.scss */
-#compteurs .blockInstallations {
-  height: 100px;
-  width: 200px;
-  background-color: #050505;
-  z-index: 9999;
-  position: fixed;
-  bottom: 30px;
-  left: 230px;
-  text-align: center;
-  border-left: 1px solid white;
-  text-transform: uppercase;
-}
-/* line 121, ../sass/_map.scss */
-#compteurs .blockInstallations .nbInstallations {
-  color: #ffffff;
-  font-size: 35px;
-  font-family: "Oswald";
-  letter-spacing: normal;
-  display: block;
-  font-weight: bold;
-  line-height: 60px;
-}
-/* line 127, ../sass/_map.scss */
-#compteurs .blockInstallations .libelleNbInstallations {
-  color: #ffffff;
-  font-size: 15px;
-  font-family: "Aspergit";
-  letter-spacing: normal;
-}
-/* line 132, ../sass/_map.scss */
-#compteurs .blockLicences {
-  height: 100px;
-  width: 150px;
-  background-color: #050505;
-  z-index: 9999;
-  position: fixed;
-  bottom: 30px;
-  left: 430px;
-  text-align: center;
-  border-left: 1px solid white;
-  text-transform: uppercase;
-}
-/* line 143, ../sass/_map.scss */
-#compteurs .blockLicences .nbLicencies {
-  color: #ffffff;
-  font-size: 35px;
-  font-family: "Oswald";
-  letter-spacing: normal;
-  display: block;
-  font-weight: bold;
-  line-height: 60px;
-}
-/* line 149, ../sass/_map.scss */
-#compteurs .blockLicences .libelleNbLicencies {
-  color: #ffffff;
-  font-size: 15px;
-  font-family: "Aspergit";
-  letter-spacing: normal;
-}
-
-/* line 2, ../sass/_oneDep.scss */
-#compteurs .blockNumDep {
-  height: 100px;
-  width: 200px;
-  background-color: #050505;
-  z-index: 9999;
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  text-align: center;
-  text-transform: uppercase;
-}
-/* line 12, ../sass/_oneDep.scss */
-#compteurs .blockNumDep .numDep {
-  color: #ffffff;
-  font-size: 45px;
-  font-family: "Oswald";
-  letter-spacing: normal;
-  display: block;
-  font-weight: bold;
-  line-height: 100px;
-}
-/* line 20, ../sass/_oneDep.scss */
-#compteurs .blockInstallations {
-  height: 100px;
-  width: 200px;
-  background-color: #050505;
-  z-index: 9999;
-  position: fixed;
-  bottom: 30px;
-  left: 230px;
-  text-align: center;
-  border-left: 1px solid white;
-  text-transform: uppercase;
-}
-/* line 31, ../sass/_oneDep.scss */
-#compteurs .blockInstallations .nbInstallations {
-  color: #ffffff;
-  font-size: 35px;
-  font-family: "Oswald";
-  letter-spacing: normal;
-  display: block;
-  font-weight: bold;
-  line-height: 60px;
-}
-/* line 37, ../sass/_oneDep.scss */
-#compteurs .blockInstallations .libelleNbInstallations {
-  color: #ffffff;
-  font-size: 15px;
-  font-family: "Aspergit";
-  letter-spacing: normal;
-}
-/* line 42, ../sass/_oneDep.scss */
-#compteurs .blockLicences {
-  height: 100px;
-  width: 150px;
-  background-color: #050505;
-  z-index: 9999;
-  position: fixed;
-  bottom: 30px;
-  left: 430px;
-  text-align: center;
-  border-left: 1px solid white;
-  text-transform: uppercase;
-}
-/* line 53, ../sass/_oneDep.scss */
-#compteurs .blockLicences .nbLicencies {
-  color: #ffffff;
-  font-size: 35px;
-  font-family: "Oswald";
-  letter-spacing: normal;
-  display: block;
-  font-weight: bold;
-  line-height: 60px;
-}
-/* line 59, ../sass/_oneDep.scss */
-#compteurs .blockLicences .libelleNbLicencies {
-  color: #ffffff;
-  font-size: 15px;
-  font-family: "Aspergit";
-  letter-spacing: normal;
+/* line 13, ../sass/_oneDep.scss */
+.oneDep .path {
+  cursor: pointer;
 }
 
 /* line 23, ../sass/base.scss */
@@ -613,7 +462,7 @@ body {
   letter-spacing: normal;
 }
 
-/* line 32, ../sass/base.scss */
+/* line 35, ../sass/base.scss */
 #borderTop {
   position: fixed;
   top: 0;
@@ -624,7 +473,7 @@ body {
   z-index: 9999;
 }
 
-/* line 42, ../sass/base.scss */
+/* line 45, ../sass/base.scss */
 #borderLeft {
   position: fixed;
   top: 0;
@@ -635,7 +484,7 @@ body {
   z-index: 9999;
 }
 
-/* line 52, ../sass/base.scss */
+/* line 55, ../sass/base.scss */
 #borderBottom {
   position: fixed;
   bottom: 0;
@@ -646,7 +495,7 @@ body {
   z-index: 9999;
 }
 
-/* line 62, ../sass/base.scss */
+/* line 65, ../sass/base.scss */
 #borderRight {
   position: fixed;
   top: 0;
@@ -657,32 +506,32 @@ body {
   z-index: 9999;
 }
 
-/* line 72, ../sass/base.scss */
+/* line 75, ../sass/base.scss */
 a,
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 78, ../sass/base.scss */
+/* line 81, ../sass/base.scss */
 .view {
   height: 100%;
 }
 
-/* line 82, ../sass/base.scss */
+/* line 85, ../sass/base.scss */
 svg {
   display: block;
   overflow: hidden;
   /* fix IE */
 }
 
-/* line 87, ../sass/base.scss */
+/* line 90, ../sass/base.scss */
 #svgMapDep {
-  margin-top: -58px;
+  margin-top: -65px;
 }
 
 /*	NAVIGATION */
-/* line 90, ../sass/base.scss */
+/* line 93, ../sass/base.scss */
 #home-link {
   border-right: 1px solid #ffffff;
   cursor: pointer;
@@ -709,13 +558,13 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 106, ../sass/base.scss */
+/* line 109, ../sass/base.scss */
 #home-link:hover {
   background: #ffffff;
   color: #050505;
 }
 
-/* line 112, ../sass/base.scss */
+/* line 115, ../sass/base.scss */
 #back {
   cursor: pointer;
   padding: 3px;
@@ -735,16 +584,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 124, ../sass/base.scss */
+/* line 127, ../sass/base.scss */
 #back:hover {
   background: #ffffff;
 }
-/* line 127, ../sass/base.scss */
+/* line 130, ../sass/base.scss */
 #back:hover polygon {
   fill: #050505;
 }
 
-/* line 132, ../sass/base.scss */
+/* line 135, ../sass/base.scss */
 #next {
   cursor: pointer;
   padding: 3px;
@@ -764,16 +613,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 144, ../sass/base.scss */
+/* line 147, ../sass/base.scss */
 #next:hover {
   background: #ffffff;
 }
-/* line 147, ../sass/base.scss */
+/* line 150, ../sass/base.scss */
 #next:hover polygon {
   fill: #050505;
 }
 
-/* line 152, ../sass/base.scss */
+/* line 155, ../sass/base.scss */
 #info {
   cursor: pointer;
   padding: 3px;
@@ -793,17 +642,17 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 164, ../sass/base.scss */
+/* line 167, ../sass/base.scss */
 #info:hover {
   background: #ffffff;
 }
-/* line 167, ../sass/base.scss */
+/* line 170, ../sass/base.scss */
 #info:hover path {
   fill: #050505;
 }
 
 /* Information frame */
-/* line 173, ../sass/base.scss */
+/* line 176, ../sass/base.scss */
 .information {
   cursor: url('../sass/img/cross.png?1413661940'), auto;
   visibility: hidden;
@@ -815,7 +664,7 @@ svg {
   opacity: 0.8;
   z-index: 999999;
 }
-/* line 183, ../sass/base.scss */
+/* line 187, ../sass/base.scss */
 .information .title {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
@@ -826,7 +675,7 @@ svg {
   width: 300px;
   margin-top: 100px;
 }
-/* line 190, ../sass/base.scss */
+/* line 194, ../sass/base.scss */
 .information .table {
   margin-top: 20%;
   display: table;
@@ -835,28 +684,141 @@ svg {
   font-family: "Aspergit Bold";
   letter-spacing: normal;
 }
-/* line 194, ../sass/base.scss */
+/* line 198, ../sass/base.scss */
 .information .table .table-row {
   display: table-row;
   text-align: center;
 }
-/* line 197, ../sass/base.scss */
+/* line 201, ../sass/base.scss */
 .information .table .table-row div {
   display: table-cell;
   text-align: center;
   width: 13%;
 }
-/* line 201, ../sass/base.scss */
+/* line 205, ../sass/base.scss */
 .information .table .table-row div span {
   display: inline-block;
 }
-/* line 204, ../sass/base.scss */
+/* line 208, ../sass/base.scss */
 .information .table .table-row div .sportTitle {
   padding: 0 8px 0 8px;
   font-size: 16px;
 }
-/* line 207, ../sass/base.scss */
+/* line 211, ../sass/base.scss */
 .information .table .table-row div .sportTitle span {
   font-size: 19px;
   display: inherit;
+}
+
+/* Sticky footer */
+/* line 225, ../sass/base.scss */
+#compteurs .blockDepartements {
+  height: 100px;
+  width: 200px;
+  background-color: #050505;
+  z-index: 9999;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 235, ../sass/base.scss */
+#compteurs .blockDepartements .nbDepartements {
+  color: #ffffff;
+  font-size: 35px;
+  font-family: "Oswald";
+  letter-spacing: normal;
+  display: block;
+  font-weight: bold;
+  line-height: 60px;
+}
+/* line 241, ../sass/base.scss */
+#compteurs .blockDepartements .libelleNbDepartements {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Aspergit";
+  letter-spacing: normal;
+}
+/* line 245, ../sass/base.scss */
+#compteurs .blockNumDep {
+  height: 100px;
+  width: 200px;
+  background-color: #050505;
+  z-index: 9999;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 255, ../sass/base.scss */
+#compteurs .blockNumDep .numDep {
+  color: #ffffff;
+  font-size: 45px;
+  font-family: "Oswald";
+  letter-spacing: normal;
+  display: block;
+  font-weight: bold;
+  line-height: 100px;
+}
+/* line 263, ../sass/base.scss */
+#compteurs .blockInstallations {
+  height: 100px;
+  width: 200px;
+  background-color: #050505;
+  z-index: 9999;
+  position: fixed;
+  bottom: 30px;
+  left: 230px;
+  text-align: center;
+  border-left: 1px solid white;
+  text-transform: uppercase;
+}
+/* line 274, ../sass/base.scss */
+#compteurs .blockInstallations .nbInstallations {
+  color: #ffffff;
+  font-size: 35px;
+  font-family: "Oswald";
+  letter-spacing: normal;
+  display: block;
+  font-weight: bold;
+  line-height: 60px;
+}
+/* line 280, ../sass/base.scss */
+#compteurs .blockInstallations .libelleNbInstallations {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Aspergit";
+  letter-spacing: normal;
+}
+/* line 285, ../sass/base.scss */
+#compteurs .blockLicences {
+  height: 100px;
+  width: 150px;
+  background-color: #050505;
+  z-index: 9999;
+  position: fixed;
+  bottom: 30px;
+  left: 430px;
+  text-align: center;
+  border-left: 1px solid white;
+  text-transform: uppercase;
+}
+/* line 296, ../sass/base.scss */
+#compteurs .blockLicences .nbLicencies {
+  color: #ffffff;
+  font-size: 35px;
+  font-family: "Oswald";
+  letter-spacing: normal;
+  display: block;
+  font-weight: bold;
+  line-height: 60px;
+}
+/* line 302, ../sass/base.scss */
+#compteurs .blockLicences .libelleNbLicencies {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Aspergit";
+  letter-spacing: normal;
 }

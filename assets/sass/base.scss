@@ -27,6 +27,9 @@ body, html{
 body{
 	@include font($black,14px ,$aspergit,normal);
 	// border: solid $grey 30px;
+	// position:absolute;
+	// height: 100%;
+	// width: 100%;
 }
 
 #borderTop {
@@ -84,7 +87,7 @@ svg {
 	overflow:hidden;/* fix IE */
 }
 
-#svgMapDep{	margin-top: -58px; }
+#svgMapDep{	margin-top: -65px; }
 
 /*	NAVIGATION */
 #home-link{
@@ -177,6 +180,7 @@ svg {
 	background: image-url("bck-info-window.png") repeat;
 	height: 100%;
 	width: 100%;
+	// margin: -30px 0 0 -30px;
 	@include opacity(0.8);
 	z-index: 999999;
 
@@ -214,4 +218,89 @@ svg {
 	}
 
 
+}
+
+/* Sticky footer */
+#compteurs{
+	.blockDepartements{
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		.nbDepartements{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbDepartements{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
+	.blockNumDep{
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		.numDep{
+			@include font($white,45px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 100px;
+		}
+	}
+
+	.blockInstallations{
+		height: 100px;
+		width: 200px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 230px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbInstallations{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbInstallations{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
+
+	.blockLicences{
+		height: 100px;
+		width: 150px;
+		background-color: $black;
+		z-index: 9999;
+		position: fixed;
+		bottom: 30px;
+		left: 430px;
+		text-align: center;
+		border-left: 1px solid white;
+		text-transform: uppercase;
+		.nbLicencies{
+			@include font($white,35px ,"Oswald",normal);
+			display: block;
+			font-weight: bold;
+			line-height: 60px;
+		}
+		.libelleNbLicencies{
+			@include font($white,15px ,$aspergit,normal);
+		}
+	}
 }
