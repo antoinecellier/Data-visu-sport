@@ -1,6 +1,10 @@
 DataVizSport.controller("MainCtrl", ['$routeParams','$scope',
-									 '$rootScope','$window','$location',
-	function($routeParams, $scope, $rootScope, $window, $location) {
+									 '$rootScope','$window','$location','$route',
+	function($routeParams, $scope, $rootScope, $window, $location, $route) {
+
+
+	// Classe transition
+	$scope.transition = "page-home";
 
 	$scope.back = function (){
  		$window.history.back();

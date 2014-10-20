@@ -1,0 +1,47 @@
+.ng-enter{ 
+  z-index: 8888; 
+}
+.ng-leave{ 
+  z-index: 9999; 
+}
+
+// From page-home
+.ng-enter.page-home { 
+	-webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+}
+
+.ng-leave.page-home { 
+  -webkit-animation-name: slideOutUp;
+          animation-name: slideOutUp; 
+}
+
+.ng-enter.page-map { 
+	-webkit-animation-name: slideInUp;
+            animation-name: slideInUp;
+}
+
+.ng-leave.page-map { 
+	-webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+}
+
+.ng-enter.page-map-reload { 
+	-webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+}
+
+.ng-leave.page-map-reload { 
+	-webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+}
+
+.ng-enter.page-departement { 
+	-webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+}
+
+.ng-leave.page-departement { 
+	-webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+}

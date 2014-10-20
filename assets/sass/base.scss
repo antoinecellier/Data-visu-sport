@@ -16,6 +16,8 @@
 @include all-icon-sprites(true);
 $icon-sprite-dimensions: true;
 
+@import "animate";
+@import "transition";
 @import "home";
 @import "map";
 @import "oneDep";
@@ -36,7 +38,7 @@ body{
 	right: 0;
 	height: 30px;
 	background: $grey;
-	z-index: 9999;
+	z-index: 99999;
 }
 
 #borderLeft {
@@ -46,7 +48,7 @@ body{
 	bottom: 0;
 	width: 30px;
 	background: $grey;
-	z-index: 9999;
+	z-index: 99999;
 }
 
 #borderBottom {
@@ -56,7 +58,7 @@ body{
 	left: 0;
 	height: 30px;
 	background: $grey;
-	z-index: 9999;
+	z-index: 99999;
 }
 
 #borderRight {
@@ -66,7 +68,7 @@ body{
 	bottom: 0;
 	width: 30px;
 	background: $grey;
-	z-index: 9999;
+	z-index: 99999;
 }
 
 a,
@@ -77,6 +79,8 @@ a:hover {
 
 .view{
 	height : 100%;
+	position: absolute;
+	width: 100%;
 }
 
 svg {

@@ -3,6 +3,9 @@ DataVizSport.controller("DepartementCtrl",
 						 '$rootScope', 'DatasService', 'DatasWidgetsService',
 	function($routeParams, $interval, $scope, $rootScope, DatasService, DatasWidgetsService) {
 
+		// Classe transition
+		$scope.transition = "page-departement";
+
 		$scope.numDep = $routeParams.id;
 		$scope.loadingIsDone = false;
 		/**

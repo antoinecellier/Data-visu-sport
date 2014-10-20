@@ -39,12 +39,12 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 				var deps = svg
 					.append("g")
 					.attr("id", "departements")
-					.attr("transform", "translate(0,0)scale(-1,-1)");;
+					.attr("transform", "translate(0,0)scale(1,1)");;
 
-					deps
-					.transition()
-					.duration(2000)
-					.attr("transform", "translate(0,0)scale(1,1)");
+					// deps
+					// .transition()
+					// .duration(2000)
+					// .attr("transform", "translate(0,0)scale(1,1)");
 
 				/*
 				 * On charge les données GeoJSON
