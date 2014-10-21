@@ -1,96 +1,47 @@
-<<<<<<< HEAD
-.ng-enter{ 
-  z-index: 8888; 
+.ng-enter{
+  z-index: 8888;
 }
-.ng-leave{ 
-  z-index: 9999; 
+.ng-leave{
+  z-index: 9999;
 }
 
 // From page-home
-.ng-enter.page-home { 
+.ng-enter.page-home {
 	-webkit-animation-name: fadeIn;
             animation-name: fadeIn;
 }
 
-.ng-leave.page-home { 
+.ng-leave.page-home {
   -webkit-animation-name: slideOutUp;
-          animation-name: slideOutUp; 
+          animation-name: slideOutUp;
 }
 
-.ng-enter.page-map { 
+.ng-enter.page-map {
 	-webkit-animation-name: slideInUp;
             animation-name: slideInUp;
 }
 
-.ng-leave.page-map { 
+.ng-leave.page-map {
 	-webkit-animation-name: fadeOut;
             animation-name: fadeOut;
 }
 
-.ng-enter.page-map-reload { 
+.ng-enter.page-map-reload {
 	-webkit-animation-name: fadeIn;
             animation-name: fadeIn;
 }
 
-.ng-leave.page-map-reload { 
+.ng-leave.page-map-reload {
 	-webkit-animation-name: fadeOut;
             animation-name: fadeOut;
 }
 
-.ng-enter.page-departement { 
+.ng-enter.page-departement {
 	-webkit-animation-name: fadeIn;
             animation-name: fadeIn;
 }
 
-.ng-leave.page-departement { 
+.ng-leave.page-departement {
 	-webkit-animation-name: fadeOut;
             animation-name: fadeOut;
-=======
-.ng-enter{ 
-  z-index: 8888; 
-}
-.ng-leave{ 
-  z-index: 9999; 
-}
-
-// From page-home
-.ng-enter.page-home { 
-	-webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-}
-
-.ng-leave.page-home { 
-  -webkit-animation-name: slideOutUp;
-          animation-name: slideOutUp; 
-}
-
-.ng-enter.page-map { 
-	-webkit-animation-name: slideInUp;
-            animation-name: slideInUp;
-}
-
-.ng-leave.page-map { 
-	-webkit-animation-name: fadeOut;
-            animation-name: fadeOut;
-}
-
-.ng-enter.page-map-reload { 
-	-webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-}
-
-.ng-leave.page-map-reload { 
-	-webkit-animation-name: fadeOut;
-            animation-name: fadeOut;
-}
-
-.ng-enter.page-departement { 
-	-webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-}
-
-.ng-leave.page-departement { 
-	-webkit-animation-name: fadeOut;
-            animation-name: fadeOut;
->>>>>>> alex
 }

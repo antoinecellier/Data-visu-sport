@@ -307,4 +307,9 @@ svg {
 			@include font($white,15px ,$aspergit,normal);
 		}
 	}
+	.infoCompteurs {
+		color: #ffffff;
+		margin-top:5px;
+		font-size: 10px;
+	}
 }

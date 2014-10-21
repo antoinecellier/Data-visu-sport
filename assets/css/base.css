@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
-/* line 5, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,76 +26,76 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 @font-face {
   font-family: "Aspergit";
-  src: url('../fonts/aspergit-webfont.ttf?1413410359') format('truetype');
+  src: url('../fonts/aspergit-webfont.ttf?1413559459') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Light";
-  src: url('../fonts/aspergit_light-webfont.ttf?1413410360') format('truetype');
+  src: url('../fonts/aspergit_light-webfont.ttf?1413559459') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Light Italic";
-  src: url('../fonts/aspergit_light_italic-webfont.ttf?1413410360') format('truetype');
+  src: url('../fonts/aspergit_light_italic-webfont.ttf?1413559459') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Italic";
-  src: url('../fonts/aspergit_italic-webfont.ttf?1413410359') format('truetype');
+  src: url('../fonts/aspergit_italic-webfont.ttf?1413559459') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Bold Italic";
-  src: url('../fonts/aspergit_bold_italic_0-webfont.ttf?1413410359') format('truetype');
+  src: url('../fonts/aspergit_bold_italic_0-webfont.ttf?1413559459') format('truetype');
 }
 @font-face {
   font-family: "Aspergit Bold";
-  src: url('../fonts/aspergit_bold-webfont.ttf?1413410359') format('truetype');
+  src: url('../fonts/aspergit_bold-webfont.ttf?1413559459') format('truetype');
 }
 @font-face {
   font-family: "Blenda Script";
-  src: url('../fonts/blenda_script-webfont.ttf?1413410360') format('truetype');
+  src: url('../fonts/blenda_script-webfont.ttf?1413559459') format('truetype');
 }
 /* line 176, icon/*.png */
 .icon-sprite, .icon-baseball, .icon-basketball, .icon-combat, .icon-ecusson, .icon-equitation, .icon-football, .icon-golf, .icon-provencal, .icon-tennis, .icon-w-baseball, .icon-w-basketball, .icon-w-combat, .icon-w-equitation, .icon-w-football, .icon-w-golf, .icon-w-provencal, .icon-w-tennis {
@@ -103,159 +103,119 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: no-repeat;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-baseball {
   background-position: 0 0;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-basketball {
   background-position: 0 -28px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-combat {
   background-position: 0 -56px;
   height: 27px;
   width: 30px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-ecusson {
   background-position: 0 -83px;
   height: 123px;
   width: 128px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-football {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-equitation {
->>>>>>> alex
   background-position: 0 -206px;
   height: 28px;
   width: 23px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-golf {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-football {
->>>>>>> alex
   background-position: 0 -234px;
   height: 28px;
   width: 28px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-horse {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-golf {
->>>>>>> alex
   background-position: 0 -262px;
   height: 28px;
   width: 28px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-petanque {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-provencal {
->>>>>>> alex
   background-position: 0 -290px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-tennis {
   background-position: 0 -318px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-baseball {
   background-position: 0 -346px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-basketball {
   background-position: 0 -374px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-combat {
   background-position: 0 -402px;
   height: 27px;
   width: 30px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-football {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-equitation {
->>>>>>> alex
   background-position: 0 -429px;
   height: 28px;
   width: 23px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-golf {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-football {
->>>>>>> alex
   background-position: 0 -457px;
   height: 28px;
   width: 28px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-horse {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-golf {
->>>>>>> alex
   background-position: 0 -485px;
   height: 28px;
   width: 28px;
 }
 
-<<<<<<< HEAD
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-w-petanque {
-=======
 /* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-provencal {
->>>>>>> alex
   background-position: 0 -513px;
   height: 28px;
   width: 28px;
 }
 
-/* line 84, ../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-w-tennis {
   background-position: 0 -541px;
   height: 28px;
@@ -268,7 +228,7 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2014 Daniel Eden
 */
-/* line 9, ../sass/_animate.scss */
+/* line 8, ../sass/_animate.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -276,13 +236,13 @@ Copyright (c) 2014 Daniel Eden
   animation-fill-mode: both;
 }
 
-/* line 16, ../sass/_animate.scss */
+/* line 15, ../sass/_animate.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 21, ../sass/_animate.scss */
+/* line 20, ../sass/_animate.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -336,7 +296,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, -4px, 0);
   }
 }
-/* line 82, ../sass/_animate.scss */
+/* line 81, ../sass/_animate.scss */
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
@@ -361,7 +321,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 110, ../sass/_animate.scss */
+/* line 109, ../sass/_animate.scss */
 .flash {
   -webkit-animation-name: flash;
   animation-name: flash;
@@ -396,7 +356,7 @@ Copyright (c) 2014 Daniel Eden
     transform: scale3d(1, 1, 1);
   }
 }
-/* line 151, ../sass/_animate.scss */
+/* line 150, ../sass/_animate.scss */
 .pulse {
   -webkit-animation-name: pulse;
   animation-name: pulse;
@@ -462,7 +422,7 @@ Copyright (c) 2014 Daniel Eden
     transform: scale3d(1, 1, 1);
   }
 }
-/* line 230, ../sass/_animate.scss */
+/* line 229, ../sass/_animate.scss */
 .rubberBand {
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
@@ -496,7 +456,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(10px, 0, 0);
   }
 }
-/* line 269, ../sass/_animate.scss */
+/* line 268, ../sass/_animate.scss */
 .shake {
   -webkit-animation-name: shake;
   animation-name: shake;
@@ -546,7 +506,7 @@ Copyright (c) 2014 Daniel Eden
     transform: rotate3d(0, 0, 1, 0deg);
   }
 }
-/* line 328, ../sass/_animate.scss */
+/* line 327, ../sass/_animate.scss */
 .swing {
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
@@ -599,7 +559,7 @@ Copyright (c) 2014 Daniel Eden
     transform: scale3d(1, 1, 1);
   }
 }
-/* line 390, ../sass/_animate.scss */
+/* line 389, ../sass/_animate.scss */
 .tada {
   -webkit-animation-name: tada;
   animation-name: tada;
@@ -666,7 +626,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 471, ../sass/_animate.scss */
+/* line 470, ../sass/_animate.scss */
 .wobble {
   -webkit-animation-name: wobble;
   animation-name: wobble;
@@ -738,7 +698,7 @@ Copyright (c) 2014 Daniel Eden
     transform: scale3d(1, 1, 1);
   }
 }
-/* line 556, ../sass/_animate.scss */
+/* line 555, ../sass/_animate.scss */
 .bounceIn {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
@@ -802,7 +762,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 631, ../sass/_animate.scss */
+/* line 630, ../sass/_animate.scss */
 .bounceInDown {
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
@@ -864,7 +824,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 704, ../sass/_animate.scss */
+/* line 703, ../sass/_animate.scss */
 .bounceInLeft {
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
@@ -926,7 +886,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 777, ../sass/_animate.scss */
+/* line 776, ../sass/_animate.scss */
 .bounceInRight {
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight;
@@ -988,7 +948,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 850, ../sass/_animate.scss */
+/* line 849, ../sass/_animate.scss */
 .bounceInUp {
   -webkit-animation-name: bounceInUp;
   animation-name: bounceInUp;
@@ -1026,7 +986,7 @@ Copyright (c) 2014 Daniel Eden
     transform: scale3d(0.3, 0.3, 0.3);
   }
 }
-/* line 893, ../sass/_animate.scss */
+/* line 892, ../sass/_animate.scss */
 .bounceOut {
   -webkit-animation-name: bounceOut;
   animation-name: bounceOut;
@@ -1066,7 +1026,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, 2000px, 0);
   }
 }
-/* line 938, ../sass/_animate.scss */
+/* line 937, ../sass/_animate.scss */
 .bounceOutDown {
   -webkit-animation-name: bounceOutDown;
   animation-name: bounceOutDown;
@@ -1096,7 +1056,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(-2000px, 0, 0);
   }
 }
-/* line 971, ../sass/_animate.scss */
+/* line 970, ../sass/_animate.scss */
 .bounceOutLeft {
   -webkit-animation-name: bounceOutLeft;
   animation-name: bounceOutLeft;
@@ -1126,7 +1086,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(2000px, 0, 0);
   }
 }
-/* line 1004, ../sass/_animate.scss */
+/* line 1003, ../sass/_animate.scss */
 .bounceOutRight {
   -webkit-animation-name: bounceOutRight;
   animation-name: bounceOutRight;
@@ -1164,7 +1124,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, -2000px, 0);
   }
 }
-/* line 1047, ../sass/_animate.scss */
+/* line 1046, ../sass/_animate.scss */
 .bounceOutUp {
   -webkit-animation-name: bounceOutUp;
   animation-name: bounceOutUp;
@@ -1186,7 +1146,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 1062, ../sass/_animate.scss */
+/* line 1061, ../sass/_animate.scss */
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
@@ -1216,7 +1176,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1095, ../sass/_animate.scss */
+/* line 1094, ../sass/_animate.scss */
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
@@ -1246,7 +1206,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1128, ../sass/_animate.scss */
+/* line 1127, ../sass/_animate.scss */
 .fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
   animation-name: fadeInDownBig;
@@ -1276,7 +1236,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1161, ../sass/_animate.scss */
+/* line 1160, ../sass/_animate.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
@@ -1306,7 +1266,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1194, ../sass/_animate.scss */
+/* line 1193, ../sass/_animate.scss */
 .fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
   animation-name: fadeInLeftBig;
@@ -1336,7 +1296,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1227, ../sass/_animate.scss */
+/* line 1226, ../sass/_animate.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
@@ -1366,7 +1326,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1260, ../sass/_animate.scss */
+/* line 1259, ../sass/_animate.scss */
 .fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
@@ -1396,7 +1356,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1293, ../sass/_animate.scss */
+/* line 1292, ../sass/_animate.scss */
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
@@ -1426,7 +1386,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 1326, ../sass/_animate.scss */
+/* line 1325, ../sass/_animate.scss */
 .fadeInUpBig {
   -webkit-animation-name: fadeInUpBig;
   animation-name: fadeInUpBig;
@@ -1448,7 +1408,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 1341, ../sass/_animate.scss */
+/* line 1340, ../sass/_animate.scss */
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -1474,7 +1434,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, 100%, 0);
   }
 }
-/* line 1370, ../sass/_animate.scss */
+/* line 1369, ../sass/_animate.scss */
 .fadeOutDown {
   -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
@@ -1500,7 +1460,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, 2000px, 0);
   }
 }
-/* line 1399, ../sass/_animate.scss */
+/* line 1398, ../sass/_animate.scss */
 .fadeOutDownBig {
   -webkit-animation-name: fadeOutDownBig;
   animation-name: fadeOutDownBig;
@@ -1526,7 +1486,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(-100%, 0, 0);
   }
 }
-/* line 1428, ../sass/_animate.scss */
+/* line 1427, ../sass/_animate.scss */
 .fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
@@ -1552,7 +1512,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(-2000px, 0, 0);
   }
 }
-/* line 1457, ../sass/_animate.scss */
+/* line 1456, ../sass/_animate.scss */
 .fadeOutLeftBig {
   -webkit-animation-name: fadeOutLeftBig;
   animation-name: fadeOutLeftBig;
@@ -1578,7 +1538,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(100%, 0, 0);
   }
 }
-/* line 1486, ../sass/_animate.scss */
+/* line 1485, ../sass/_animate.scss */
 .fadeOutRight {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
@@ -1604,7 +1564,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(2000px, 0, 0);
   }
 }
-/* line 1515, ../sass/_animate.scss */
+/* line 1514, ../sass/_animate.scss */
 .fadeOutRightBig {
   -webkit-animation-name: fadeOutRightBig;
   animation-name: fadeOutRightBig;
@@ -1630,7 +1590,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, -100%, 0);
   }
 }
-/* line 1544, ../sass/_animate.scss */
+/* line 1543, ../sass/_animate.scss */
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
@@ -1656,7 +1616,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, -2000px, 0);
   }
 }
-/* line 1573, ../sass/_animate.scss */
+/* line 1572, ../sass/_animate.scss */
 .fadeOutUpBig {
   -webkit-animation-name: fadeOutUpBig;
   animation-name: fadeOutUpBig;
@@ -1726,7 +1686,7 @@ Copyright (c) 2014 Daniel Eden
     animation-timing-function: ease-in;
   }
 }
-/* line 1652, ../sass/_animate.scss */
+/* line 1651, ../sass/_animate.scss */
 .animated.flip {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
@@ -1790,7 +1750,7 @@ Copyright (c) 2014 Daniel Eden
     transform: perspective(400px);
   }
 }
-/* line 1725, ../sass/_animate.scss */
+/* line 1724, ../sass/_animate.scss */
 .flipInX {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -1854,7 +1814,7 @@ Copyright (c) 2014 Daniel Eden
     transform: perspective(400px);
   }
 }
-/* line 1798, ../sass/_animate.scss */
+/* line 1797, ../sass/_animate.scss */
 .flipInY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -1894,7 +1854,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 1843, ../sass/_animate.scss */
+/* line 1842, ../sass/_animate.scss */
 .flipOutX {
   -webkit-animation-name: flipOutX;
   animation-name: flipOutX;
@@ -1936,7 +1896,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 1890, ../sass/_animate.scss */
+/* line 1889, ../sass/_animate.scss */
 .flipOutY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -1990,7 +1950,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 1951, ../sass/_animate.scss */
+/* line 1950, ../sass/_animate.scss */
 .lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
@@ -2018,7 +1978,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 1982, ../sass/_animate.scss */
+/* line 1981, ../sass/_animate.scss */
 .lightSpeedOut {
   -webkit-animation-name: lightSpeedOut;
   animation-name: lightSpeedOut;
@@ -2058,7 +2018,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 2025, ../sass/_animate.scss */
+/* line 2024, ../sass/_animate.scss */
 .rotateIn {
   -webkit-animation-name: rotateIn;
   animation-name: rotateIn;
@@ -2096,7 +2056,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 2066, ../sass/_animate.scss */
+/* line 2065, ../sass/_animate.scss */
 .rotateInDownLeft {
   -webkit-animation-name: rotateInDownLeft;
   animation-name: rotateInDownLeft;
@@ -2134,7 +2094,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 2107, ../sass/_animate.scss */
+/* line 2106, ../sass/_animate.scss */
 .rotateInDownRight {
   -webkit-animation-name: rotateInDownRight;
   animation-name: rotateInDownRight;
@@ -2172,7 +2132,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 2148, ../sass/_animate.scss */
+/* line 2147, ../sass/_animate.scss */
 .rotateInUpLeft {
   -webkit-animation-name: rotateInUpLeft;
   animation-name: rotateInUpLeft;
@@ -2210,7 +2170,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 2189, ../sass/_animate.scss */
+/* line 2188, ../sass/_animate.scss */
 .rotateInUpRight {
   -webkit-animation-name: rotateInUpRight;
   animation-name: rotateInUpRight;
@@ -2244,7 +2204,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 2226, ../sass/_animate.scss */
+/* line 2225, ../sass/_animate.scss */
 .rotateOut {
   -webkit-animation-name: rotateOut;
   animation-name: rotateOut;
@@ -2278,7 +2238,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 2263, ../sass/_animate.scss */
+/* line 2262, ../sass/_animate.scss */
 .rotateOutDownLeft {
   -webkit-animation-name: rotateOutDownLeft;
   animation-name: rotateOutDownLeft;
@@ -2312,7 +2272,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 2300, ../sass/_animate.scss */
+/* line 2299, ../sass/_animate.scss */
 .rotateOutDownRight {
   -webkit-animation-name: rotateOutDownRight;
   animation-name: rotateOutDownRight;
@@ -2346,7 +2306,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 2337, ../sass/_animate.scss */
+/* line 2336, ../sass/_animate.scss */
 .rotateOutUpLeft {
   -webkit-animation-name: rotateOutUpLeft;
   animation-name: rotateOutUpLeft;
@@ -2380,7 +2340,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 2374, ../sass/_animate.scss */
+/* line 2373, ../sass/_animate.scss */
 .rotateOutUpRight {
   -webkit-animation-name: rotateOutUpRight;
   animation-name: rotateOutUpRight;
@@ -2446,7 +2406,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 2447, ../sass/_animate.scss */
+/* line 2446, ../sass/_animate.scss */
 .hinge {
   -webkit-animation-name: hinge;
   animation-name: hinge;
@@ -2477,7 +2437,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 2482, ../sass/_animate.scss */
+/* line 2481, ../sass/_animate.scss */
 .rollIn {
   -webkit-animation-name: rollIn;
   animation-name: rollIn;
@@ -2504,7 +2464,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
   }
 }
-/* line 2513, ../sass/_animate.scss */
+/* line 2512, ../sass/_animate.scss */
 .rollOut {
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
@@ -2530,7 +2490,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 1;
   }
 }
-/* line 2542, ../sass/_animate.scss */
+/* line 2541, ../sass/_animate.scss */
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
@@ -2568,7 +2528,7 @@ Copyright (c) 2014 Daniel Eden
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-/* line 2583, ../sass/_animate.scss */
+/* line 2582, ../sass/_animate.scss */
 .zoomInDown {
   -webkit-animation-name: zoomInDown;
   animation-name: zoomInDown;
@@ -2606,7 +2566,7 @@ Copyright (c) 2014 Daniel Eden
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-/* line 2624, ../sass/_animate.scss */
+/* line 2623, ../sass/_animate.scss */
 .zoomInLeft {
   -webkit-animation-name: zoomInLeft;
   animation-name: zoomInLeft;
@@ -2644,7 +2604,7 @@ Copyright (c) 2014 Daniel Eden
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-/* line 2665, ../sass/_animate.scss */
+/* line 2664, ../sass/_animate.scss */
 .zoomInRight {
   -webkit-animation-name: zoomInRight;
   animation-name: zoomInRight;
@@ -2682,7 +2642,7 @@ Copyright (c) 2014 Daniel Eden
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-/* line 2706, ../sass/_animate.scss */
+/* line 2705, ../sass/_animate.scss */
 .zoomInUp {
   -webkit-animation-name: zoomInUp;
   animation-name: zoomInUp;
@@ -2714,7 +2674,7 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
   }
 }
-/* line 2743, ../sass/_animate.scss */
+/* line 2742, ../sass/_animate.scss */
 .zoomOut {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut;
@@ -2756,7 +2716,7 @@ Copyright (c) 2014 Daniel Eden
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-/* line 2788, ../sass/_animate.scss */
+/* line 2787, ../sass/_animate.scss */
 .zoomOutDown {
   -webkit-animation-name: zoomOutDown;
   animation-name: zoomOutDown;
@@ -2790,7 +2750,7 @@ Copyright (c) 2014 Daniel Eden
     transform-origin: left center;
   }
 }
-/* line 2825, ../sass/_animate.scss */
+/* line 2824, ../sass/_animate.scss */
 .zoomOutLeft {
   -webkit-animation-name: zoomOutLeft;
   animation-name: zoomOutLeft;
@@ -2824,7 +2784,7 @@ Copyright (c) 2014 Daniel Eden
     transform-origin: right center;
   }
 }
-/* line 2862, ../sass/_animate.scss */
+/* line 2861, ../sass/_animate.scss */
 .zoomOutRight {
   -webkit-animation-name: zoomOutRight;
   animation-name: zoomOutRight;
@@ -2866,7 +2826,7 @@ Copyright (c) 2014 Daniel Eden
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-/* line 2907, ../sass/_animate.scss */
+/* line 2906, ../sass/_animate.scss */
 .zoomOutUp {
   -webkit-animation-name: zoomOutUp;
   animation-name: zoomOutUp;
@@ -2894,7 +2854,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateY(0);
   }
 }
-/* line 2938, ../sass/_animate.scss */
+/* line 2937, ../sass/_animate.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
@@ -2922,7 +2882,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateX(0);
   }
 }
-/* line 2969, ../sass/_animate.scss */
+/* line 2968, ../sass/_animate.scss */
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
@@ -2950,7 +2910,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateX(0);
   }
 }
-/* line 3000, ../sass/_animate.scss */
+/* line 2999, ../sass/_animate.scss */
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
@@ -2978,7 +2938,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateY(0);
   }
 }
-/* line 3031, ../sass/_animate.scss */
+/* line 3030, ../sass/_animate.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
@@ -3006,7 +2966,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateY(100%);
   }
 }
-/* line 3062, ../sass/_animate.scss */
+/* line 3061, ../sass/_animate.scss */
 .slideOutDown {
   -webkit-animation-name: slideOutDown;
   animation-name: slideOutDown;
@@ -3034,7 +2994,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateX(-100%);
   }
 }
-/* line 3093, ../sass/_animate.scss */
+/* line 3092, ../sass/_animate.scss */
 .slideOutLeft {
   -webkit-animation-name: slideOutLeft;
   animation-name: slideOutLeft;
@@ -3062,7 +3022,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateX(100%);
   }
 }
-/* line 3124, ../sass/_animate.scss */
+/* line 3123, ../sass/_animate.scss */
 .slideOutRight {
   -webkit-animation-name: slideOutRight;
   animation-name: slideOutRight;
@@ -3090,7 +3050,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translateY(-100%);
   }
 }
-/* line 3155, ../sass/_animate.scss */
+/* line 3154, ../sass/_animate.scss */
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
@@ -3396,11 +3356,7 @@ body {
   letter-spacing: normal;
 }
 
-<<<<<<< HEAD
-/* line 34, ../sass/base.scss */
-=======
 /* line 37, ../sass/base.scss */
->>>>>>> alex
 #borderTop {
   position: fixed;
   top: 0;
@@ -3411,11 +3367,7 @@ body {
   z-index: 99999;
 }
 
-<<<<<<< HEAD
-/* line 44, ../sass/base.scss */
-=======
 /* line 47, ../sass/base.scss */
->>>>>>> alex
 #borderLeft {
   position: fixed;
   top: 0;
@@ -3426,11 +3378,7 @@ body {
   z-index: 99999;
 }
 
-<<<<<<< HEAD
-/* line 54, ../sass/base.scss */
-=======
 /* line 57, ../sass/base.scss */
->>>>>>> alex
 #borderBottom {
   position: fixed;
   bottom: 0;
@@ -3441,11 +3389,7 @@ body {
   z-index: 99999;
 }
 
-<<<<<<< HEAD
-/* line 64, ../sass/base.scss */
-=======
 /* line 67, ../sass/base.scss */
->>>>>>> alex
 #borderRight {
   position: fixed;
   top: 0;
@@ -3456,54 +3400,34 @@ body {
   z-index: 99999;
 }
 
-<<<<<<< HEAD
-/* line 74, ../sass/base.scss */
-=======
 /* line 77, ../sass/base.scss */
->>>>>>> alex
 a,
 a:active,
 a:hover {
   outline: 0;
 }
 
-<<<<<<< HEAD
-/* line 80, ../sass/base.scss */
-=======
 /* line 83, ../sass/base.scss */
->>>>>>> alex
 .view {
   height: 100%;
   position: absolute;
   width: 100%;
 }
 
-<<<<<<< HEAD
-/* line 86, ../sass/base.scss */
-=======
 /* line 89, ../sass/base.scss */
->>>>>>> alex
 svg {
   display: block;
   overflow: hidden;
   /* fix IE */
 }
 
-<<<<<<< HEAD
-/* line 91, ../sass/base.scss */
-=======
 /* line 94, ../sass/base.scss */
->>>>>>> alex
 #svgMapDep {
   margin-top: -65px;
 }
 
 /*	NAVIGATION */
-<<<<<<< HEAD
-/* line 94, ../sass/base.scss */
-=======
 /* line 97, ../sass/base.scss */
->>>>>>> alex
 #home-link {
   border-right: 1px solid #ffffff;
   cursor: pointer;
@@ -3530,21 +3454,13 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
-/* line 110, ../sass/base.scss */
-=======
 /* line 113, ../sass/base.scss */
->>>>>>> alex
 #home-link:hover {
   background: #ffffff;
   color: #050505;
 }
 
-<<<<<<< HEAD
-/* line 116, ../sass/base.scss */
-=======
 /* line 119, ../sass/base.scss */
->>>>>>> alex
 #back {
   cursor: pointer;
   padding: 3px;
@@ -3564,28 +3480,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
-/* line 128, ../sass/base.scss */
-#back:hover {
-  background: #ffffff;
-}
-/* line 131, ../sass/base.scss */
-=======
 /* line 131, ../sass/base.scss */
 #back:hover {
   background: #ffffff;
 }
 /* line 134, ../sass/base.scss */
->>>>>>> alex
 #back:hover polygon {
   fill: #050505;
 }
 
-<<<<<<< HEAD
-/* line 136, ../sass/base.scss */
-=======
 /* line 139, ../sass/base.scss */
->>>>>>> alex
 #next {
   cursor: pointer;
   padding: 3px;
@@ -3605,28 +3509,16 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
-/* line 148, ../sass/base.scss */
-#next:hover {
-  background: #ffffff;
-}
-/* line 151, ../sass/base.scss */
-=======
 /* line 151, ../sass/base.scss */
 #next:hover {
   background: #ffffff;
 }
 /* line 154, ../sass/base.scss */
->>>>>>> alex
 #next:hover polygon {
   fill: #050505;
 }
 
-<<<<<<< HEAD
-/* line 156, ../sass/base.scss */
-=======
 /* line 159, ../sass/base.scss */
->>>>>>> alex
 #info {
   cursor: pointer;
   padding: 3px;
@@ -3635,7 +3527,7 @@ svg {
   right: 30px;
   height: 30px;
   width: 30px;
-  background: url('../sass/img/bck-info-window.png?1413647239') repeat;
+  background: url('../sass/img/bck-info-window.png?1413648760') repeat;
   z-index: 99999;
   -moz-transition-property: background;
   -o-transition-property: background;
@@ -3646,45 +3538,29 @@ svg {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-<<<<<<< HEAD
-/* line 168, ../sass/base.scss */
-#info:hover {
-  background: #ffffff;
-}
-/* line 171, ../sass/base.scss */
-=======
 /* line 171, ../sass/base.scss */
 #info:hover {
   background: #ffffff;
 }
 /* line 174, ../sass/base.scss */
->>>>>>> alex
 #info:hover path {
   fill: #050505;
 }
 
 /* Information frame */
-<<<<<<< HEAD
-/* line 177, ../sass/base.scss */
-=======
 /* line 180, ../sass/base.scss */
->>>>>>> alex
 .information {
-  cursor: url('../sass/img/cross.png?1413661832'), auto;
+  cursor: url('../sass/img/cross.png?1413661940'), auto;
   visibility: hidden;
   position: fixed;
-  background: url('../sass/img/bck-info-window.png?1413647239') repeat;
+  background: url('../sass/img/bck-info-window.png?1413648760') repeat;
   height: 100%;
   width: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   z-index: 999999;
 }
-<<<<<<< HEAD
-/* line 187, ../sass/base.scss */
-=======
 /* line 191, ../sass/base.scss */
->>>>>>> alex
 .information .title {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
@@ -3695,11 +3571,7 @@ svg {
   width: 300px;
   margin-top: 100px;
 }
-<<<<<<< HEAD
-/* line 194, ../sass/base.scss */
-=======
 /* line 198, ../sass/base.scss */
->>>>>>> alex
 .information .table {
   margin-top: 20%;
   display: table;
@@ -3708,47 +3580,27 @@ svg {
   font-family: "Aspergit Bold";
   letter-spacing: normal;
 }
-<<<<<<< HEAD
-/* line 198, ../sass/base.scss */
-=======
 /* line 202, ../sass/base.scss */
->>>>>>> alex
 .information .table .table-row {
   display: table-row;
   text-align: center;
 }
-<<<<<<< HEAD
-/* line 201, ../sass/base.scss */
-=======
 /* line 205, ../sass/base.scss */
->>>>>>> alex
 .information .table .table-row div {
   display: table-cell;
   text-align: center;
   width: 13%;
 }
-<<<<<<< HEAD
-/* line 205, ../sass/base.scss */
-.information .table .table-row div span {
-  display: inline-block;
-}
-/* line 208, ../sass/base.scss */
-=======
 /* line 209, ../sass/base.scss */
 .information .table .table-row div span {
   display: inline-block;
 }
 /* line 212, ../sass/base.scss */
->>>>>>> alex
 .information .table .table-row div .sportTitle {
   padding: 0 8px 0 8px;
   font-size: 16px;
 }
-<<<<<<< HEAD
-/* line 211, ../sass/base.scss */
-=======
 /* line 215, ../sass/base.scss */
->>>>>>> alex
 .information .table .table-row div .sportTitle span {
   font-size: 19px;
   display: inherit;
@@ -3865,4 +3717,10 @@ svg {
   font-size: 15px;
   font-family: "Aspergit";
   letter-spacing: normal;
+}
+/* line 310, ../sass/base.scss */
+#compteurs .infoCompteurs {
+  color: #ffffff;
+  margin-top: 5px;
+  font-size: 10px;
 }

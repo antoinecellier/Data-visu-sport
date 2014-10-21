@@ -3,9 +3,9 @@
 @include font-face("Aspergit", font-files("aspergit-webfont.ttf"));
 
 @include font-face("Aspergit Light", font-files("aspergit_light-webfont.ttf"));
- 
+
 @include font-face("Aspergit Light Italic", font-files("aspergit_light_italic-webfont.ttf"));
- 
+
 @include font-face("Aspergit Italic", font-files("aspergit_italic-webfont.ttf"));
 
 @include font-face("Aspergit Bold Italic", font-files("aspergit_bold_italic_0-webfont.ttf"));
@@ -34,6 +34,6 @@ $blenda : "Blenda Script";
 	font-family : $font-family;
 	letter-spacing : $letter-spacing;
 }
- 
+
 // Text shadow
 $default-text-shadow-color: rgba($black, 0.9);
