@@ -3239,15 +3239,17 @@ Copyright (c) 2014 Daniel Eden
   letter-spacing: normal;
   border-bottom: 1px solid #050505;
   padding-bottom: 25px;
+  text-transform: uppercase;
+  margin-top: 5px;
 }
-/* line 26, ../sass/_map.scss */
+/* line 28, ../sass/_map.scss */
 .infoCurrentDep .infoNumCurrentDep {
   color: #050505;
   font-size: 40px;
   font-family: "Oswald";
   letter-spacing: normal;
 }
-/* line 30, ../sass/_map.scss */
+/* line 32, ../sass/_map.scss */
 .infoCurrentDep .infoNbLicenciesCurrentDep {
   padding-top: 25px;
   color: #050505;
@@ -3255,7 +3257,7 @@ Copyright (c) 2014 Daniel Eden
   font-family: "Aspergit";
   letter-spacing: normal;
 }
-/* line 35, ../sass/_map.scss */
+/* line 37, ../sass/_map.scss */
 .infoCurrentDep .infoLibelleNbLicenciesCurrentDep {
   color: #050505;
   font-size: 30px;
@@ -3264,20 +3266,20 @@ Copyright (c) 2014 Daniel Eden
   border-bottom: 1px solid #050505;
   padding-bottom: 25px;
 }
-/* line 43, ../sass/_map.scss */
+/* line 45, ../sass/_map.scss */
 .infoCurrentDep .oneStatDep .listIcon .iconSport {
   display: inline-block;
   margin: 10px;
   width: 30px;
 }
-/* line 50, ../sass/_map.scss */
+/* line 52, ../sass/_map.scss */
 .infoCurrentDep .oneStatDep .listNbLicencies {
   color: #050505;
   font-size: 18px;
   font-family: "Aspergit Bold";
   letter-spacing: normal;
 }
-/* line 52, ../sass/_map.scss */
+/* line 54, ../sass/_map.scss */
 .infoCurrentDep .oneStatDep .listNbLicencies .chiffre {
   display: inline-block;
   text-align: center;
@@ -3285,13 +3287,13 @@ Copyright (c) 2014 Daniel Eden
   width: 30px;
 }
 
-/* line 62, ../sass/_map.scss */
+/* line 64, ../sass/_map.scss */
 .titleSite {
   border-top: 1px solid #050505;
   text-align: center;
   margin-top: 100px;
 }
-/* line 66, ../sass/_map.scss */
+/* line 68, ../sass/_map.scss */
 .titleSite .hightTitle {
   text-transform: uppercase;
   line-height: 50px;
@@ -3301,19 +3303,18 @@ Copyright (c) 2014 Daniel Eden
   font-family: "Oswald";
   letter-spacing: normal;
 }
-/* line 72, ../sass/_map.scss */
+/* line 74, ../sass/_map.scss */
 .titleSite .subTitle {
   color: #050505;
-  font-size: 30px;
+  font-size: 27px;
   font-family: "Aspergit";
   letter-spacing: normal;
   margin-top: 15px;
-  font-style: italic;
   border-bottom: 1px solid #050505;
   padding-bottom: 50px;
 }
 
-/* line 82, ../sass/_map.scss */
+/* line 84, ../sass/_map.scss */
 #chart .bar {
   margin: 10px;
   width: 30px;

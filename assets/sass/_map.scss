@@ -21,6 +21,8 @@
 		@include font($black,40px ,$aspergit,normal);
 		border-bottom: 1px solid $black;
 		padding-bottom: 25px;
+		text-transform: uppercase;
+		margin-top: 5px;
 	}
 
 	.infoNumCurrentDep{
@@ -70,9 +72,9 @@
 		@include font($black,40px ,"Oswald",normal);
 	}
 	.subTitle{
-		@include font($black,30px ,$aspergit,normal);
+		@include font($black,27px ,$aspergit,normal);
 		margin-top: 15px;
-		font-style: italic;
+		// font-style: italic;
 		border-bottom: 1px solid $black;
 		padding-bottom: 50px;
 	}

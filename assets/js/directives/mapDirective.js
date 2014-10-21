@@ -86,102 +86,84 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 				function displayStatDep(d){
 					d3.selectAll('.titleSite').remove();
 					d3.selectAll('.oneStatDep').remove();
+					var dataCurrentDep = null
 
 					var dataCurrentDep = getDataDep(d.properties.CODE_DEPT);
 					var frameInfoDep = d3.selectAll('.infoCurrentDep');
 
-					var divOneDep = frameInfoDep
-						.append('div')
-						.attr('class','oneStatDep');
+					if (dataCurrentDep){
 
-					divOneDep.append('div')
-						.attr('class','infoNumCurrentDep')
-						.text(function() {
-							return "#"+d.properties.CODE_DEPT;
-						});
+						var divOneDep = frameInfoDep
+							.append('div')
+							.attr('class','oneStatDep');
 
-					divOneDep.append('h1')
-						.attr('class','infoNomCurrentDep')
-						.text(function() {
-							return d.properties.NOM_DEPT;
-						});
-
-					var divTwoDep = divOneDep.append('div')
-						.attr('class','listContent');
-
-					var listIcon = divTwoDep.append('div')
-						.attr('class','listIcon');
-
-					listIcon.append('div')
-						.attr('class','iconSport icon-football');
-					listIcon.append('div')
-						.attr('class','iconSport icon-tennis');
-
-					listIcon.append('div')
-						.attr('class','iconSport icon-combat');
-
-					listIcon.append('div')
-						.attr('class','iconSport icon-provencal');
-
-					listIcon.append('div')
-						.attr('class','iconSport icon-basketball');
-
-					listIcon.append('div')
-						.attr('class','iconSport icon-equitation');
-
-					listIcon.append('div')
-						.attr('class','iconSport icon-golf');
-
-					var listNbLicencies = divTwoDep.append('div')
-						.attr('class','listNbLicencies');
-
-					for(var sport in dataCurrentDep)
-					{
-						// console.log(dataCurrentDep[sport]);
-						listNbLicencies.append('span')
-							.attr('class','chiffre')
-							.text(function (){
-						 		return dataCurrentDep[sport].nbLicence;
+						divOneDep.append('div')
+							.attr('class','infoNumCurrentDep')
+							.text(function() {
+								return "#" + dataCurrentDep.id;
 							});
-					}
 
-					// SVG chart nbLicence / Sport / Departement
-					var svgOneDep = divOneDep.append('svg')
-						.attr("width","360")
-						.attr("height","300");
+						divOneDep.append('h1')
+							.attr('class','infoNomCurrentDep')
+							.text(function() {
+								return dataCurrentDep.departement;
+							});
 
-					var gOneDep = svgOneDep.append('g');
-					var spaceBarX = 15;
-					for(var sport in dataCurrentDep)
-					{
-						//215 max taille possible
-						//588 max valeur possible dans les sport
-						//TODO : récup le max par département dans l'idéal..
+						var divTwoDep = divOneDep.append('div')
+							.attr('class','listContent');
 
-						// console.log(dataCurrentDep[sport]);
-						gOneDep.append('rect')
-							.attr('class','bar')
-							.attr('x', spaceBarX)
-							.attr('y', '100')
-							.attr('width', '30')
-							.attr('height', parseInt(dataCurrentDep[sport].nbLicence) * 215 / 588);
+						var listIcon = divTwoDep.append('div')
+							.attr('class','listIcon');
 
-							spaceBarX += 50;
-					}
+						listIcon.append('div')
+							.attr('class','iconSport icon-football');
+						listIcon.append('div')
+							.attr('class','iconSport icon-tennis');
 
-					/**
-					divOneDep.append('div')
-						.attr('class','infoNbLicenciesCurrentDep')
-						.text(function() {
-							return 759 - (6 * d.properties.ID_GEOFLA);
+						listIcon.append('div')
+							.attr('class','iconSport icon-combat');
+
+						listIcon.append('div')
+							.attr('class','iconSport icon-provencal');
+
+						listIcon.append('div')
+							.attr('class','iconSport icon-basketball');
+
+						listIcon.append('div')
+							.attr('class','iconSport icon-equitation');
+
+						listIcon.append('div')
+							.attr('class','iconSport icon-golf');
+
+						var listNbLicencies = divTwoDep.append('div')
+							.attr('class','listNbLicencies');
+
+						angular.forEach(dataCurrentDep.sport, function(index){
+							listNbLicencies.append('span')
+								.attr('class','chiffre')
+								.text(function (){
+							 		return index.nbLicence;
+								});
 						});
 
-					divOneDep.append('div')
-						.attr('class','infoLibelleNbLicenciesCurrentDep')
-						.text(function() {
-							return "licenciés";
+						// SVG chart nbLicence / Sport / Departement
+						var svgOneDep = divOneDep.append('svg')
+							.attr("width","360")
+							.attr("height","300");
+
+						var gOneDep = svgOneDep.append('g');
+						var spaceBarX = 15;
+						angular.forEach(dataCurrentDep.sport, function(index){
+							gOneDep.append('rect')
+								.attr('class','bar')
+								.attr('x', spaceBarX)
+								.attr('y', '100')
+								.attr('width', '30')
+								.attr('height', parseInt(index.nbLicence) * 215 / 588);
+
+								spaceBarX += 50;
 						});
-					**/
+					}
 				}
 
 				/*
@@ -194,7 +176,7 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 
 				/*
 				 *	Initialise la div "titre du site"
-				*/
+				 */
 				function initTitleDiv(){
 					var frameInfoDep = d3.selectAll('.infoCurrentDep');
 
@@ -221,7 +203,7 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 				 */
 				var centered;
 				function countyClickHandler(d) {
-					$location.path('/departement/'+d.properties.CODE_DEPT);
+					$location.path('/departement/' + d.properties.CODE_DEPT);
 				};
 
 				// Cache la vue pour un departement
@@ -249,30 +231,16 @@ DataVizSport.directive('d3map', ['DatasService','$http','$location',
 					.style("visibility", "visible");
 				}
 
-				// Affichage d'une vue pour un département
-				function initViewOneDepartement( data ){
-					var chefLieu = data.properties.NOM_CHF;
-					d3.selectAll('div#departementData')
-						.append('div')
-						.attr('class','oneDepartement '+data.properties.CODE_DEPT);
-
-					d3.selectAll('.oneDepartement')
-						.append('h1')
-						.text(function(data){
-							return " Chef lieu : "+chefLieu;
-						});
-				}
-
 				// Données d'un département
 				function getDataDep(id){
 					var dataDep;
 
 					DatasService.getDatas().then(function(sportData){
-						$scope.dataSport = sportData;
+						$scope.sportData = sportData;
 					});
-					angular.forEach($scope.dataSport, function(index){
+					angular.forEach($scope.sportData, function(index){
 						if(index.id == id)
-							dataDep = index.sport
+							dataDep = index
 					});
 					return dataDep;
 				}

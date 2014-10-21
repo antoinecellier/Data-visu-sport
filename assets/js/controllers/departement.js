@@ -6,6 +6,7 @@ DataVizSport.controller("DepartementCtrl", ['$routeParams','$interval', '$scope'
 
 		$scope.numDep = $routeParams.id;
 		$scope.loadingIsDone = false;
+
 		/**
 		 * Récupération des données d'un departement
 		 */
@@ -35,7 +36,6 @@ DataVizSport.controller("DepartementCtrl", ['$routeParams','$interval', '$scope'
 					$interval.cancel(intervalLicenceTot);
 			}, 5);
 		};
-
 
 		/**
 		 * Récupération du nombre d'équipement pour un departement

@@ -126,7 +126,7 @@ DataVizSport.directive('linechart', ['DatasService','$http','$location',
 						path.selectAll(".text-" + d.data.classe).attr("xlink:href", (function(d) { return 'assets/sass/img/icon/' + d.data.classe + '.png'; }));
 
 						//modifie le rectangle de tata
-						restData.selectAll(".rectData").attr("fill", "#babdc0");
+						restData.selectAll(".rectData").attr("fill", "#FFFBDF");
 
 						var textrestData = restData.append("text")
 							.attr("class", "rectText")

@@ -11,7 +11,7 @@ DataVizSport.provider("DatasService", function (){
 		});
 
 		var datas = promiseStart.then(function(value){
-			return	$http.get("datas/datas_formated.json")
+			return	$http.get("datas/datas.json")
 					.success(function(data, status){
 						sportDep = data.datas;
 					});
@@ -88,21 +88,6 @@ DataVizSport.provider("DatasWidgetsService", function (){
 			 },
 
 			/**
-			 * Fonction : Affichage du nombre de licences / département | TODO
-			 */
-			 getNbLicenceParDepartements: function( id ) {
-				var nbLicenceParDepartement =
-					DatasService.getDataDep(id).then(function(dataDep){
-						var nbLicencies = 0;
-						angular.forEach(dataDep.sport, function (index){
-							nbLicencies += parseInt(index.nbLicence);
-						});
-						return nbLicencies;
-					});
-				return nbLicenceParDepartement;
-			},
-
-			/**
 			 * Fonction : Récupération du nombre d'équipement total
 			 */
 			getNbLicencesTotal: function() {
@@ -144,8 +129,24 @@ DataVizSport.provider("DatasWidgetsService", function (){
 					});
 				return NbEquipementTotal;
 			},
-						/**
-			 * Fonction : Récupération du nombre d'équipement pour un departement
+
+			/**
+			 * Fonction : Affichage du nombre de licences pour un département
+			 */
+			 getNbLicenceParDepartements: function( id ) {
+				var nbLicenceParDepartement =
+					DatasService.getDataDep(id).then(function(dataDep){
+						var nbLicencies = 0;
+						angular.forEach(dataDep.sport, function (index){
+							nbLicencies += parseInt(index.nbLicence);
+						});
+						return nbLicencies;
+					});
+				return nbLicenceParDepartement;
+			},
+
+			/**
+			 * Fonction : Récupération du nombre d'équipement pour un département
 			 */
 			getNbEquipementsParDepartement: function( id ) {
 				var nbEquipementsParDepartement =
